@@ -417,7 +417,7 @@ function buildSectionHTML(cat,products,startDelay){
   var cards=shown.map(function(p,i){return buildCard(p,startDelay+i)}).join('');
   var moreHTML='';
   if(remaining.length>0){
-    moreHTML='<div class="btn-more-wrap" id="more-'+esc(cat)+'" data-remaining="'+esc(JSON.stringify(remaining))+'"><button class="btn-more" onclick="showMore(\''+esc(cat)+\')">查看更多（还剩 '+remaining.length+' 件）</button></div>';
+    moreHTML='<div class="btn-more-wrap" id="more-'+esc(cat)+'" data-remaining="'+esc(JSON.stringify(remaining))+'"><button class="btn-more" onclick="showMore(\''+esc(cat)+'\')">查看更多（还剩 '+remaining.length+' 件）</button></div>';
   }else if(products.length>4){
     moreHTML='<div class="btn-more-wrap"><button class="btn-more all-shown" disabled>已展示全部 '+products.length+' 件商品</button></div>';
   }
