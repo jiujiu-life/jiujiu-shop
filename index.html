@@ -327,7 +327,9 @@ var SP=[
   {id:'p011',name:'玩具抑菌清洁泡沫',images:[],price:'88',stock:150,status:'published',category:'私密护理',description:'温和抑菌配方，守护每一件亲密好物的洁净。爱自己，也爱惜陪伴你的每一件器物。'},
   {id:'p012',name:'纯欲风蕾丝睡裙',images:[],price:'218',stock:45,status:'published',category:'仪式氛围',description:'若隐若现的蕾丝，温柔贴合每一寸曲线。不是为了取悦谁，只为认真爱自己的身体。'},
   {id:'p013',name:'香氛蜡烛礼盒',images:[],price:'138',stock:80,status:'published',category:'仪式氛围',description:'天然大豆蜡，淡淡玫瑰香氛。点燃一支蜡烛，让整个房间充满仪式感与温柔。'},
-  {id:'p014',name:'真丝眼罩+羽毛套装',images:[],price:'128',stock:100,status:'published',category:'仪式氛围',description:'遮住视觉，放大触觉。真丝的温柔与羽毛的轻盈，让感官体验升维。'}
+  {id:'p014',name:'真丝眼罩+羽毛套装',images:[],price:'128',stock:100,status:'published',category:'仪式氛围',description:'遮住视觉，放大触觉。真丝的温柔与羽毛的轻盈，让感官体验升维。'},
+  {id:'p015',name:'丽波吮吸加温震动棒',images:['images/p002_1.jpg','images/p002_2.jpg','images/p002_3.jpg','images/p002_4.jpg','images/p002_5.jpg'],price:'67.9',stock:366,status:'published',category:'独处愉悦',description:'品牌：丽波 | 材质：ABS | 颜色：酒红色 | 吮吸+扣动+加温三重体验，长230mm宽32mm。静音设计最大噪音仅20dB。爱自己，从认真了解自己的身体开始。'},
+  {id:'p016',name:'丽波蠕动吮吸按摩棒',images:['images/p003_1.jpg','images/p003_2.jpg','images/p003_3.jpg','images/p003_4.jpg','images/p003_5.jpg'],price:'41.9',stock:50,status:'published',category:'独处愉悦',description:'品牌：丽波 | 材质：ABS | 蠕动吮吸双重刺激，静音设计。每一丝温柔的触碰，都是对自己的深情告白。'}
 ];
 var SS={customer_service_qr:'',contact_wechat:'jiujiu_service'};
 
@@ -336,10 +338,10 @@ var Store={
   getProducts:function(){try{return JSON.parse(localStorage.getItem('jj_products')||'[]')}catch(e){return[]}},
   getSettings:function(){try{return JSON.parse(localStorage.getItem('jj_settings')||'{}')}catch(e){return{}}},
   init:function(){
-    if(!localStorage.getItem('jj_init_v6')){
+    if(!localStorage.getItem('jj_init_v7')){
       localStorage.setItem('jj_products',JSON.stringify(SP));
       localStorage.setItem('jj_settings',JSON.stringify(SS));
-      localStorage.setItem('jj_init_v6','1');
+      localStorage.setItem('jj_init_v7','1');
     }
   }
 };
