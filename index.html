@@ -389,10 +389,10 @@ var Store={
   getProducts:function(){try{return JSON.parse(localStorage.getItem('jj_products')||'[]')}catch(e){return[]}},
   getSettings:function(){try{return JSON.parse(localStorage.getItem('jj_settings')||'{}')}catch(e){return{}}},
   init:function(){
-    if(!localStorage.getItem('jj_init_v12')){
+    if(!localStorage.getItem('jj_init_v13')){
       localStorage.setItem('jj_products',JSON.stringify(SP));
       localStorage.setItem('jj_settings',JSON.stringify(SS));
-      localStorage.setItem('jj_init_v12','1');
+      localStorage.setItem('jj_init_v13','1');
     }
   }
 };
@@ -471,14 +471,14 @@ function buildCard(p,startDelay){
 
 function buildSectionHTML(cat,products,startDelay){
   var shuffled=shuffle(products);
-  var showCount=Math.min(4,shuffled.length);
+  var showCount=Math.min(8,shuffled.length);
   var shown=shuffled.slice(0,showCount);
   var remaining=shuffled.slice(showCount);
   var cards=shown.map(function(p,i){return buildCard(p,startDelay+i)}).join('');
   var moreHTML='';
   if(remaining.length>0){
     moreHTML='<div class="btn-more-wrap" id="more-'+esc(cat)+'" data-remaining="'+esc(JSON.stringify(remaining))+'"><button class="btn-more" onclick="showMore(\''+esc(cat)+'\')">查看更多（还剩 '+remaining.length+' 件）</button></div>';
-  }else if(products.length>4){
+  }else if(products.length>8){
     moreHTML='<div class="btn-more-wrap"><button class="btn-more all-shown" disabled>已展示全部 '+products.length+' 件商品</button></div>';
   }
   return '<section class="cat-section" data-cat="'+esc(cat)+'">'
@@ -494,7 +494,7 @@ function showMore(cat){
   var remaining=JSON.parse(data);
   var grid=document.getElementById('grid-'+cat);
   var existing=grid.querySelectorAll('.p-card').length;
-  var next=remaining.splice(0,4);
+  var next=remaining.splice(0,8);
   wrap.setAttribute('data-remaining',JSON.stringify(remaining));
   next.forEach(function(p,i){
     var div=document.createElement('div');
