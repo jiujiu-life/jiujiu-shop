@@ -415,10 +415,10 @@ var Store={
   getProducts:function(){try{return JSON.parse(localStorage.getItem('jj_products')||'[]')}catch(e){return[]}},
   getSettings:function(){try{return JSON.parse(localStorage.getItem('jj_settings')||'{}')}catch(e){return{}}},
   init:function(){
-    if(!localStorage.getItem('jj_init_v16')){
+    if(!localStorage.getItem('jj_init_v17')){
       localStorage.setItem('jj_products',JSON.stringify(SP));
       localStorage.setItem('jj_settings',JSON.stringify(SS));
-      localStorage.setItem('jj_init_v16','1');
+      localStorage.setItem('jj_init_v17','1');
     }
   }
 };
@@ -537,7 +537,13 @@ function showMore(cat){
 /* ===== Product Detail ===== */
 function openP(id){
   var ps=Store.getProducts();
-  for(var i=0;i<ps.length;i++){if(ps[i].id===id){curProduct=ps[i];break}}
+  for(var i=0;i<ps.length;i++){if(ps[i].id===id){curProduct=ps[i  {id:'p129',name:'爱世界威霸炮机电动遥控震动伸缩加温免提自慰伸缩炮机全自动可躺(mx)',images:['images/p129_1.jpg'],price:'219.7',stock:100,status:'published',category:'独处愉悦',description:'全自动可躺设计，电动遥控震动伸缩加温免提。品质保障，私密发货。'},
+  {id:'p130',name:'插电女用炮机全自动抽插伸缩震动电动加温仿真阳具男女自慰器后庭(mx)',images:['images/p130_1.jpg'],price:'105',stock:100,status:'published',category:'独处愉悦',description:'插电式设计，全自动抽插伸缩震动，仿真阳具电动加温。品质保障，私密发货。'},
+  {id:'p131',name:'全自动震动棒女用电动自慰器阳具加温成人情趣仿真夫妻性用品玩具(mx)',images:['images/p131_1.jpg'],price:'113.1',stock:100,status:'published',category:'独处愉悦',description:'全自动震动设计，女用电动自慰器，仿真阳具加温。品质保障，私密发货。'},
+  {id:'p132',name:'女上位阳具坐骑玩具成人情趣性女用品骑乘炮机自慰器男坐式震动棒(mx)',images:['images/p132_1.jpg'],price:'217.6',stock:100,status:'published',category:'独处愉悦',description:'女上位坐骑设计，成人情趣用品，骑乘炮机自慰器。品质保障，私密发货。'},
+  {id:'p133',name:'成人性玩具男女夫妻共用男士穿戴假阳具双人双插两性喷水阴茎情趣(mx)',images:['images/p132_1.jpg'],price:'75.3',stock:100,status:'published',category:'伴侣亲密',description:'男女夫妻共用设计，男士穿戴假阳具，双人双插玩法。品质保障，私密发货。'},
+  {id:'p134',name:'假成人充气娃娃自慰器坐骑性玩具女用品玩偶情趣抱枕女性炮机阳具(mx)',images:['images/p132_1.jpg'],price:'245.4',stock:100,status:'published',category:'独处愉悦',description:'仿真充气娃娃设计，坐骑性玩具，女用自慰器玩偶抱枕。品质保障，私密发货。'},
+];break}}
   if(!curProduct)return;
   curImgIdx=0;
   document.getElementById('dCat').textContent=curProduct.category;
