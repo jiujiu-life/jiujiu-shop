@@ -6,201 +6,9 @@
 <title>玖玖生活研究所 | 认真了解自己，也认真爱自己</title>
 <meta name="description" content="玖玖生活研究所 - 精选私密好物，独处愉悦、男悦时光、伴侣亲密、私密护理、仪式氛围。认真了解自己，也认真爱自己。">
 <link rel="icon" href="images/logo-20260829104600.png" type="image/png">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;600;700&family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
-<style>
-:root{
-  --bg-main:#1A0A0F;
-  --bg-card:rgba(42,18,24,0.88);
-  --bg-warm:rgba(61,26,37,0.6);
-  --bg-soft:rgba(42,18,24,0.5);
-  --brand:#C44962;
-  --accent:#8B1D3D;
-  --pink:#D4A5A5;
-  --pink-deep:#B08584;
-  --rose:#E8C4C4;
-  --pink-light:rgba(196,73,98,0.15);
-  --text:#F5E0E0;
-  --text-light:#C4A0A0;
-  --border:rgba(196,73,98,0.2);
-  --shadow-sm:0 2px 12px rgba(0,0,0,.3);
-  --shadow-md:0 4px 24px rgba(0,0,0,.4);
-  --shadow-lg:0 12px 48px rgba(0,0,0,.5);
-  --r-sm:8px;--r-md:16px;--r-lg:24px;--trs:all .3s ease;
-  --dark-red:#8B1D3D;--maroon:#6B0F2A;--crimson:#C44962;
-}
-*{margin:0;padding:0;box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{
-  font-family:'Noto Sans SC',-apple-system,BlinkMacSystemFont,sans-serif;
-  color:var(--text);line-height:1.6;overflow-x:hidden;
-  background:linear-gradient(180deg,#1A0A0F 0%,#240E16 30%,#1A0A0F 70%,#240E16 100%);
-  background-attachment:fixed;
-}
-
-/* ===== Background Decorations ===== */
-.bg-deco{position:fixed;pointer-events:none;z-index:0;opacity:.08}
-.bg-deco.d1{top:0;left:0;width:100%;height:60vh;background:url('images/deco-dark1-20260830142400.png') no-repeat center top;background-size:cover}
-.bg-deco.d2{bottom:0;right:0;width:100%;height:50vh;background:url('images/deco-dark2-20260830142401.png') no-repeat center bottom;background-size:cover;opacity:.06}
-
-/* ===== Header ===== */
-.header{position:sticky;top:0;z-index:100;background:rgba(26,10,15,.92);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border-bottom:1px solid var(--border);box-shadow:0 1px 12px rgba(196,73,98,.1)}
-.header-inner{max-width:1200px;margin:0 auto;padding:16px 28px;display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap}
-.brand-block{display:flex;align-items:center;gap:14px}
-.brand-logo{width:48px;height:48px;border-radius:12px;object-fit:cover;flex-shrink:0;box-shadow:var(--shadow-sm);border:1px solid var(--border)}
-.brand-text{display:flex;flex-direction:column}
-.brand-name{font-family:'Noto Serif SC',serif;font-size:22px;font-weight:600;color:var(--brand);letter-spacing:2px;line-height:1.2}
-.brand-tag{font-size:11px;color:var(--text-light);letter-spacing:2px;margin-top:2px}
-.cat-nav{display:flex;gap:6px;flex-wrap:wrap}
-.cat-nav button{padding:7px 18px;border:none;background:transparent;color:var(--text-light);font-size:14px;cursor:pointer;border-radius:20px;transition:var(--trs);font-family:inherit}
-.cat-nav button:hover{color:var(--brand);background:rgba(196,73,98,.1)}
-.cat-nav button.active{background:linear-gradient(135deg,var(--brand),var(--accent));color:#fff}
-
-/* ===== Hero ===== */
-.hero{text-align:center;padding:100px 24px 72px;position:relative;overflow:hidden;max-width:800px;margin:0 auto}
-.hero::before{content:'';position:absolute;top:0;left:0;right:0;bottom:0;background:url('images/deco-dark2-20260830142401.png') no-repeat center center;background-size:cover;opacity:.12;pointer-events:none}
-.hero::after{content:'';position:absolute;top:-50%;left:-10%;width:60%;height:200%;background:radial-gradient(ellipse,rgba(196,73,98,.1) 0%,transparent 70%);pointer-events:none}
-.hero-inner{position:relative;z-index:1}
-.hero h2{font-family:'Noto Serif SC',serif;font-size:42px;font-weight:600;color:var(--text);line-height:1.5;margin-bottom:16px;letter-spacing:1px}
-.hero h2 .accent{color:var(--brand)}
-.hero p{font-size:16px;color:var(--text-light);letter-spacing:3px;margin-bottom:8px}
-.hero .sub-tag{display:inline-block;font-size:12px;color:var(--pink-deep);background:rgba(196,73,98,.1);padding:6px 20px;border-radius:20px;letter-spacing:2px;margin-top:12px;border:1px solid rgba(196,73,98,.2)}
-.hero-deco{width:60px;height:2px;background:linear-gradient(90deg,transparent,var(--brand),transparent);margin:28px auto 0}
-
-/* ===== Category Sections ===== */
-.cat-section{max-width:1200px;margin:0 auto 60px;padding:0 28px;position:relative;z-index:1}
-.cat-section-head{text-align:center;margin-bottom:32px;padding-top:40px}
-.cat-section-head h3{font-family:'Noto Serif SC',serif;font-size:26px;font-weight:500;color:var(--text);display:inline-block;position:relative}
-.cat-section-head h3::after{content:'';display:block;width:40px;height:2px;background:linear-gradient(90deg,transparent,var(--brand),transparent);margin:10px auto 0}
-.cat-section-head p{font-size:13px;color:var(--text-light);margin-top:8px;letter-spacing:1px}
-.cat-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
-.cat-grid-bg{background:url('images/deco-dark3-20260830142402.png') no-repeat center center;background-size:cover;padding:40px 32px;border-radius:var(--r-lg);border:1px solid var(--border);position:relative}
-.cat-grid-bg::before{content:'';position:absolute;inset:0;background:rgba(26,10,15,.75);border-radius:var(--r-lg);pointer-events:none}
-.cat-grid-bg .cat-grid{position:relative;z-index:1}
-
-/* Load More Button */
-.btn-more{display:block;margin:28px auto 0;padding:12px 40px;border:1px solid var(--border);background:rgba(196,73,98,.15);color:var(--brand);font-size:14px;cursor:pointer;border-radius:30px;transition:var(--trs);font-family:inherit;letter-spacing:1px;position:relative;z-index:1}
-.btn-more:hover{background:rgba(196,73,98,.3);border-color:rgba(196,73,98,.4);transform:translateY(-2px)}
-.btn-more.all-shown{background:transparent;color:var(--text-light);cursor:default;border-color:transparent}
-.btn-more.all-shown:hover{background:transparent;transform:none}
-.btn-more-wrap{text-align:center;margin-top:8px}
-
-/* Product Card */
-.p-card{background:var(--bg-card);border-radius:var(--r-md);overflow:hidden;cursor:pointer;transition:var(--trs);box-shadow:var(--shadow-sm);animation:fadeUp .5s ease forwards;opacity:0;border:1px solid var(--border)}
-.p-card:hover{transform:translateY(-6px);box-shadow:var(--shadow-lg);border-color:rgba(196,73,98,.4)}
-.p-card-img{width:100%;aspect-ratio:1;overflow:hidden;position:relative;background:var(--bg-soft);display:flex;align-items:center;justify-content:center;padding:12px}
-.p-card-img img{max-width:100%;max-height:100%;width:auto;height:auto;object-fit:contain;transition:transform .5s ease}
-.p-card:hover .p-card-img img{transform:scale(1.06)}
-.p-card-img .ph{width:100%;height:100%;display:flex;align-items:center;justify-content:center;font-family:'Noto Serif SC',serif;font-size:18px;color:rgba(255,255,255,.85);text-align:center;padding:20px;font-weight:500}
-.p-card-info{padding:16px}
-.p-card-cat{display:inline-block;font-size:11px;color:var(--brand);background:rgba(196,73,98,.12);padding:2px 10px;border-radius:10px;margin-bottom:8px;border:1px solid rgba(196,73,98,.2)}
-.p-card-name{font-family:'Noto Serif SC',serif;font-size:16px;font-weight:500;color:var(--text);margin-bottom:6px;line-height:1.4;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
-.p-card-price{font-size:18px;color:var(--crimson);font-weight:600}
-.p-card-price::before{content:'\00a5';font-size:13px;margin-right:1px}
-
-/* ===== Product Detail Modal ===== */
-.overlay{position:fixed;inset:0;background:rgba(10,4,6,.7);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);z-index:1000;display:none;align-items:center;justify-content:center;padding:20px;opacity:0;transition:opacity .3s ease}
-.overlay.active{display:flex;opacity:1}
-.modal{background:var(--bg-card);border-radius:var(--r-lg);max-width:900px;width:100%;max-height:92vh;overflow-y:auto;position:relative;transform:scale(.92);transition:transform .3s ease;border:1px solid var(--border)}
-.overlay.active .modal{transform:scale(1)}
-.modal-close{position:absolute;top:14px;right:14px;width:36px;height:36px;border:none;background:var(--bg-warm);border-radius:50%;font-size:20px;cursor:pointer;color:var(--text-light);z-index:10;transition:var(--trs);display:flex;align-items:center;justify-content:center;line-height:1}
-.modal-close:hover{background:rgba(196,73,98,.2);color:var(--brand)}
-.modal-body{display:grid;grid-template-columns:1fr 1fr;gap:0}
-
-/* Gallery */
-.gallery{padding:28px}
-.gallery-main{width:100%;aspect-ratio:1;border-radius:var(--r-md);overflow:hidden;background:var(--bg-soft);margin-bottom:12px;position:relative;display:flex;align-items:center;justify-content:center;padding:16px;border:1px solid var(--border)}
-.gallery-main img{max-width:100%;max-height:100%;width:auto;height:auto;object-fit:contain}
-.gallery-main .ph{width:100%;height:100%;display:flex;align-items:center;justify-content:center;font-family:'Noto Serif SC',serif;font-size:26px;color:rgba(255,255,255,.85);font-weight:500}
-.gallery-nav{position:absolute;top:50%;width:100%;display:flex;justify-content:space-between;transform:translateY(-50%);pointer-events:none}
-.gallery-nav button{width:36px;height:36px;border:none;background:rgba(42,18,24,.85);border-radius:50%;font-size:18px;cursor:pointer;color:var(--brand);pointer-events:auto;transition:var(--trs);display:flex;align-items:center;justify-content:center;margin:0 8px;border:1px solid var(--border)}
-.gallery-nav button:hover{background:rgba(196,73,98,.3);box-shadow:var(--shadow-sm)}
-.gallery-nav .hidden{visibility:hidden}
-.gallery-thumbs{display:flex;gap:8px;overflow-x:auto;padding-bottom:4px}
-.gallery-thumbs::-webkit-scrollbar{height:4px}
-.gallery-thumbs::-webkit-scrollbar-thumb{background:var(--border);border-radius:2px}
-.thumb{width:60px;height:60px;border-radius:var(--r-sm);overflow:hidden;cursor:pointer;border:2px solid transparent;flex-shrink:0;transition:var(--trs);background:var(--bg-soft);display:flex;align-items:center;justify-content:center;padding:4px}
-.thumb img{max-width:100%;max-height:100%;object-fit:contain}
-.thumb.active{border-color:var(--brand)}
-
-/* Product Info */
-.p-info{padding:32px 28px 28px;display:flex;flex-direction:column}
-.p-info .cat-tag{display:inline-block;align-self:flex-start;font-size:12px;color:var(--brand);background:rgba(196,73,98,.12);padding:4px 12px;border-radius:12px;margin-bottom:12px;border:1px solid rgba(196,73,98,.2)}
-.p-info h2{font-family:'Noto Serif SC',serif;font-size:26px;font-weight:600;color:var(--text);margin-bottom:14px}
-.p-info .price{font-size:30px;color:var(--crimson);font-weight:700;margin-bottom:22px}
-.p-info .price::before{content:'\00a5';font-size:18px;margin-right:3px}
-.p-info .desc{font-size:15px;color:var(--text);line-height:1.85;margin-bottom:24px;flex:1;position:relative;padding:16px 20px;background:var(--bg-warm);border-radius:var(--r-md);border-left:3px solid var(--rose)}
-.p-info .desc::before{content:'\201C';font-family:'Noto Serif SC',serif;font-size:32px;color:var(--rose);position:absolute;top:4px;left:8px;line-height:1;opacity:.6}
-.p-info .stock-info{font-size:13px;color:var(--text-light);margin-bottom:20px}
-.p-info .stock-info .in-stock{color:#7BBE8E}
-.btn-consult{width:100%;padding:15px;border:none;background:linear-gradient(135deg,var(--brand),var(--accent));color:#fff;font-size:15px;font-weight:500;border-radius:var(--r-md);cursor:pointer;transition:var(--trs);font-family:inherit;letter-spacing:2px}
-.btn-consult:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(196,73,98,.4)}
-
-/* ===== Customer Service Modal ===== */
-.cs-modal{max-width:360px;text-align:center;padding:40px 32px 32px;background:var(--bg-card)}
-.cs-modal h3{font-family:'Noto Serif SC',serif;font-size:20px;color:var(--brand);margin-bottom:6px}
-.cs-modal .sub{font-size:13px;color:var(--text-light);margin-bottom:24px}
-.cs-qr{width:200px;height:200px;margin:0 auto 24px;border-radius:var(--r-md);overflow:hidden;background:var(--bg-soft);display:flex;align-items:center;justify-content:center;border:1px solid var(--border)}
-.cs-qr img{width:100%;height:100%;object-fit:cover}
-.cs-qr .ph{color:var(--text-light);font-size:13px;text-align:center;padding:20px}
-.cs-wechat{display:flex;align-items:center;justify-content:center;gap:10px;margin-bottom:12px}
-.cs-wechat .lbl{font-size:14px;color:var(--text-light)}
-.cs-wechat .wid{font-size:16px;color:var(--text);font-weight:500}
-.btn-copy{padding:4px 12px;border:1px solid var(--border);background:var(--bg-card);color:var(--brand);font-size:12px;border-radius:12px;cursor:pointer;transition:var(--trs);font-family:inherit}
-.btn-copy:hover{background:rgba(196,73,98,.15)}
-.cs-hint{font-size:12px;color:var(--text-light);margin-top:12px;line-height:1.6}
-
-/* ===== Footer ===== */
-.footer{text-align:center;padding:36px 24px;border-top:1px solid var(--border);background:rgba(26,10,15,.9);position:relative}
-.footer p{font-size:13px;color:var(--text-light);margin-bottom:6px}
-.footer .tag{font-size:12px;color:var(--pink-deep);margin-bottom:8px}
-.footer .admin-link{font-size:12px;color:var(--text-light);text-decoration:none;opacity:.5;transition:var(--trs)}
-.footer .admin-link:hover{opacity:1;color:var(--brand)}
-
-/* ===== Empty State ===== */
-.empty{text-align:center;padding:80px 24px;color:var(--text-light)}
-.empty .ic{font-size:48px;margin-bottom:16px;opacity:.3}
-.empty p{font-size:15px}
-
-/* ===== Animations ===== */
-@keyframes fadeUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
-
-/* ===== Responsive ===== */
-@media(max-width:1024px){
-  .cat-grid{grid-template-columns:repeat(3,1fr);gap:20px}
-  .cat-grid-bg{padding:32px 24px}
-}
-@media(max-width:768px){
-  .header-inner{flex-direction:column;gap:10px;padding:12px 16px}
-  .hero{padding:56px 20px 36px}
-  .hero h2{font-size:28px}
-  .modal-body{grid-template-columns:1fr}
-  .gallery{padding:16px}
-  .p-info{padding:16px 20px}
-  .p-info h2{font-size:22px}
-  .p-info .price{font-size:26px}
-  .cat-grid{grid-template-columns:repeat(2,1fr);gap:14px}
-  .cat-grid-bg{padding:24px 16px}
-  .p-card-info{padding:12px 10px}
-  .p-card-name{font-size:15px;white-space:normal;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical}
-  .p-card-price{font-size:16px}
-}
-@media(max-width:480px){
-  .cat-grid{grid-template-columns:1fr}
-  .hero h2{font-size:24px}
-  .cat-nav button{padding:6px 14px;font-size:13px}
-  .cs-modal{padding:32px 20px}
-  .brand-logo{width:40px;height:40px}
-  .cat-section{padding:0 16px}
-}
-</style>
+<style>:root{--bg-main:#1A0A0F;--bg-card:rgba(42,18,24,0.88);--bg-warm:rgba(61,26,37,0.6);--bg-soft:rgba(42,18,24,0.5);--brand:#C44962;--accent:#8B1D3D;--pink:#D4A5A5;--pink-deep:#B08584;--rose:#E8C4C4;--pink-light:rgba(196,73,98,0.15);--text:#F5E0E0;--text-light:#C4A0A0;--border:rgba(196,73,98,0.2);--shadow-sm:0 2px 12px rgba(0,0,0,.3);--shadow-md:0 4px 24px rgba(0,0,0,.4);--shadow-lg:0 12px 48px rgba(0,0,0,.5);--r-sm:8px;--r-md:16px;--r-lg:24px;--trs:all .3s ease;--dark-red:#8B1D3D;--maroon:#6B0F2A;--crimson:#C44962;}*{margin:0;padding:0;box-sizing:border-box}html{scroll-behavior:smooth}body{font-family:-apple-system,BlinkMacSystemFont,'PingFang SC','Microsoft YaHei','Segoe UI',Roboto,sans-serif;color:var(--text);line-height:1.6;overflow-x:hidden;background:linear-gradient(180deg,#1A0A0F 0%,#240E16 30%,#1A0A0F 70%,#240E16 100%);}body::before{content:'';position:fixed;inset:0;z-index:-1;background:url('images/deco-dark1-20260830142400.jpg') no-repeat center top;background-size:cover;opacity:.08;pointer-events:none}body::after{content:'';position:fixed;inset:0;z-index:-1;background:url('images/deco-dark2-20260830142401.jpg') no-repeat center bottom;background-size:cover;opacity:.06;pointer-events:none}.header{position:sticky;top:0;z-index:100;background:rgba(26,10,15,.92);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border-bottom:1px solid var(--border);box-shadow:0 1px 12px rgba(196,73,98,.1)}.header-inner{max-width:1200px;margin:0 auto;padding:16px 28px;display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap}.brand-block{display:flex;align-items:center;gap:14px}.brand-logo{width:48px;height:48px;border-radius:12px;object-fit:cover;flex-shrink:0;box-shadow:var(--shadow-sm);border:1px solid var(--border)}.brand-text{display:flex;flex-direction:column}.brand-name{font-family:'Noto Serif SC','STSong','SimSun','Songti SC',serif;font-size:22px;font-weight:600;color:var(--brand);letter-spacing:2px;line-height:1.2}.brand-tag{font-size:11px;color:var(--text-light);letter-spacing:2px;margin-top:2px}.cat-nav{display:flex;gap:6px;flex-wrap:wrap}.cat-nav button{padding:7px 18px;border:none;background:transparent;color:var(--text-light);font-size:14px;cursor:pointer;border-radius:20px;transition:var(--trs);font-family:inherit}.cat-nav button:hover{color:var(--brand);background:rgba(196,73,98,.1)}.cat-nav button.active{background:linear-gradient(135deg,var(--brand),var(--accent));color:#fff}.hero{text-align:center;padding:100px 24px 72px;position:relative;overflow:hidden;max-width:800px;margin:0 auto}.hero::before{content:'';position:absolute;top:0;left:0;right:0;bottom:0;background:url('images/deco-dark2-20260830142401.jpg') no-repeat center center;background-size:cover;opacity:.12;pointer-events:none}.hero::after{content:'';position:absolute;top:-50%;left:-10%;width:60%;height:200%;background:radial-gradient(ellipse,rgba(196,73,98,.1) 0%,transparent 70%);pointer-events:none}.hero-inner{position:relative;z-index:1}.hero h2{font-family:'Noto Serif SC','STSong','SimSun','Songti SC',serif;font-size:42px;font-weight:600;color:var(--text);line-height:1.5;margin-bottom:16px;letter-spacing:1px}.hero h2 .accent{color:var(--brand)}.hero p{font-size:16px;color:var(--text-light);letter-spacing:3px;margin-bottom:8px}.hero .sub-tag{display:inline-block;font-size:12px;color:var(--pink-deep);background:rgba(196,73,98,.1);padding:6px 20px;border-radius:20px;letter-spacing:2px;margin-top:12px;border:1px solid rgba(196,73,98,.2)}.hero-deco{width:60px;height:2px;background:linear-gradient(90deg,transparent,var(--brand),transparent);margin:28px auto 0}.cat-section{max-width:1200px;margin:0 auto 60px;padding:0 28px;position:relative;z-index:1}.cat-section-head{text-align:center;margin-bottom:32px;padding-top:40px}.cat-section-head h3{font-family:'Noto Serif SC','STSong','SimSun','Songti SC',serif;font-size:26px;font-weight:500;color:var(--text);display:inline-block;position:relative}.cat-section-head h3::after{content:'';display:block;width:40px;height:2px;background:linear-gradient(90deg,transparent,var(--brand),transparent);margin:10px auto 0}.cat-section-head p{font-size:13px;color:var(--text-light);margin-top:8px;letter-spacing:1px}.cat-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:24px}.cat-grid-bg{background:url('images/deco-dark3-20260830142402.jpg') no-repeat center center;background-size:cover;padding:40px 32px;border-radius:var(--r-lg);border:1px solid var(--border);position:relative}.cat-grid-bg::before{content:'';position:absolute;inset:0;background:rgba(26,10,15,.75);border-radius:var(--r-lg);pointer-events:none}.cat-grid-bg .cat-grid{position:relative;z-index:1}.btn-more{display:block;margin:28px auto 0;padding:12px 40px;border:1px solid var(--border);background:rgba(196,73,98,.15);color:var(--brand);font-size:14px;cursor:pointer;border-radius:30px;transition:var(--trs);font-family:inherit;letter-spacing:1px;position:relative;z-index:1}.btn-more:hover{background:rgba(196,73,98,.3);border-color:rgba(196,73,98,.4);transform:translateY(-2px)}.btn-more.all-shown{background:transparent;color:var(--text-light);cursor:default;border-color:transparent}.btn-more.all-shown:hover{background:transparent;transform:none}.btn-more-wrap{text-align:center;margin-top:8px}.p-card{background:var(--bg-card);border-radius:var(--r-md);overflow:hidden;cursor:pointer;transition:var(--trs);box-shadow:var(--shadow-sm);animation:fadeUp .5s ease forwards;opacity:0;border:1px solid var(--border)}.p-card:hover{transform:translateY(-6px);box-shadow:var(--shadow-lg);border-color:rgba(196,73,98,.4)}.p-card-img{width:100%;aspect-ratio:1;overflow:hidden;position:relative;background:var(--bg-soft);display:flex;align-items:center;justify-content:center;padding:12px}.p-card-img img{max-width:100%;max-height:100%;width:auto;height:auto;object-fit:contain;transition:transform .5s ease}.p-card:hover .p-card-img img{transform:scale(1.06)}.p-card-img .ph{width:100%;height:100%;display:flex;align-items:center;justify-content:center;font-family:'Noto Serif SC','STSong','SimSun','Songti SC',serif;font-size:18px;color:rgba(255,255,255,.85);text-align:center;padding:20px;font-weight:500}.p-card-info{padding:16px}.p-card-cat{display:inline-block;font-size:11px;color:var(--brand);background:rgba(196,73,98,.12);padding:2px 10px;border-radius:10px;margin-bottom:8px;border:1px solid rgba(196,73,98,.2)}.p-card-name{font-family:'Noto Serif SC','STSong','SimSun','Songti SC',serif;font-size:16px;font-weight:500;color:var(--text);margin-bottom:6px;line-height:1.4;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.p-card-price{font-size:18px;color:var(--crimson);font-weight:600}.p-card-price::before{content:'\00a5';font-size:13px;margin-right:1px}.overlay{position:fixed;inset:0;background:rgba(10,4,6,.7);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);z-index:1000;display:none;align-items:center;justify-content:center;padding:20px;opacity:0;transition:opacity .3s ease}.overlay.active{display:flex;opacity:1}.modal{background:var(--bg-card);border-radius:var(--r-lg);max-width:900px;width:100%;max-height:92vh;overflow-y:auto;position:relative;transform:scale(.92);transition:transform .3s ease;border:1px solid var(--border)}.overlay.active .modal{transform:scale(1)}.modal-close{position:absolute;top:14px;right:14px;width:36px;height:36px;border:none;background:var(--bg-warm);border-radius:50%;font-size:20px;cursor:pointer;color:var(--text-light);z-index:10;transition:var(--trs);display:flex;align-items:center;justify-content:center;line-height:1}.modal-close:hover{background:rgba(196,73,98,.2);color:var(--brand)}.modal-body{display:grid;grid-template-columns:1fr 1fr;gap:0}.gallery{padding:28px}.gallery-main{width:100%;aspect-ratio:1;border-radius:var(--r-md);overflow:hidden;background:var(--bg-soft);margin-bottom:12px;position:relative;display:flex;align-items:center;justify-content:center;padding:16px;border:1px solid var(--border)}.gallery-main img{max-width:100%;max-height:100%;width:auto;height:auto;object-fit:contain}.gallery-main .ph{width:100%;height:100%;display:flex;align-items:center;justify-content:center;font-family:'Noto Serif SC','STSong','SimSun','Songti SC',serif;font-size:26px;color:rgba(255,255,255,.85);font-weight:500}.gallery-nav{position:absolute;top:50%;width:100%;display:flex;justify-content:space-between;transform:translateY(-50%);pointer-events:none}.gallery-nav button{width:36px;height:36px;border:none;background:rgba(42,18,24,.85);border-radius:50%;font-size:18px;cursor:pointer;color:var(--brand);pointer-events:auto;transition:var(--trs);display:flex;align-items:center;justify-content:center;margin:0 8px;border:1px solid var(--border)}.gallery-nav button:hover{background:rgba(196,73,98,.3);box-shadow:var(--shadow-sm)}.gallery-nav .hidden{visibility:hidden}.gallery-thumbs{display:flex;gap:8px;overflow-x:auto;padding-bottom:4px}.gallery-thumbs::-webkit-scrollbar{height:4px}.gallery-thumbs::-webkit-scrollbar-thumb{background:var(--border);border-radius:2px}.thumb{width:60px;height:60px;border-radius:var(--r-sm);overflow:hidden;cursor:pointer;border:2px solid transparent;flex-shrink:0;transition:var(--trs);background:var(--bg-soft);display:flex;align-items:center;justify-content:center;padding:4px}.thumb img{max-width:100%;max-height:100%;object-fit:contain}.thumb.active{border-color:var(--brand)}.p-info{padding:32px 28px 28px;display:flex;flex-direction:column}.p-info .cat-tag{display:inline-block;align-self:flex-start;font-size:12px;color:var(--brand);background:rgba(196,73,98,.12);padding:4px 12px;border-radius:12px;margin-bottom:12px;border:1px solid rgba(196,73,98,.2)}.p-info h2{font-family:'Noto Serif SC','STSong','SimSun','Songti SC',serif;font-size:26px;font-weight:600;color:var(--text);margin-bottom:14px}.p-info .price{font-size:30px;color:var(--crimson);font-weight:700;margin-bottom:22px}.p-info .price::before{content:'\00a5';font-size:18px;margin-right:3px}.p-info .desc{font-size:15px;color:var(--text);line-height:1.85;margin-bottom:24px;flex:1;position:relative;padding:16px 20px;background:var(--bg-warm);border-radius:var(--r-md);border-left:3px solid var(--rose)}.p-info .desc::before{content:'\201C';font-family:'Noto Serif SC','STSong','SimSun','Songti SC',serif;font-size:32px;color:var(--rose);position:absolute;top:4px;left:8px;line-height:1;opacity:.6}.p-info .stock-info{font-size:13px;color:var(--text-light);margin-bottom:20px}.p-info .stock-info .in-stock{color:#7BBE8E}.btn-consult{width:100%;padding:15px;border:none;background:linear-gradient(135deg,var(--brand),var(--accent));color:#fff;font-size:15px;font-weight:500;border-radius:var(--r-md);cursor:pointer;transition:var(--trs);font-family:inherit;letter-spacing:2px}.btn-consult:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(196,73,98,.4)}.cs-modal{max-width:360px;text-align:center;padding:40px 32px 32px;background:var(--bg-card)}.cs-modal h3{font-family:'Noto Serif SC','STSong','SimSun','Songti SC',serif;font-size:20px;color:var(--brand);margin-bottom:6px}.cs-modal .sub{font-size:13px;color:var(--text-light);margin-bottom:24px}.cs-qr{width:200px;height:200px;margin:0 auto 24px;border-radius:var(--r-md);overflow:hidden;background:var(--bg-soft);display:flex;align-items:center;justify-content:center;border:1px solid var(--border)}.cs-qr img{width:100%;height:100%;object-fit:cover}.cs-qr .ph{color:var(--text-light);font-size:13px;text-align:center;padding:20px}.cs-wechat{display:flex;align-items:center;justify-content:center;gap:10px;margin-bottom:12px}.cs-wechat .lbl{font-size:14px;color:var(--text-light)}.cs-wechat .wid{font-size:16px;color:var(--text);font-weight:500}.btn-copy{padding:4px 12px;border:1px solid var(--border);background:var(--bg-card);color:var(--brand);font-size:12px;border-radius:12px;cursor:pointer;transition:var(--trs);font-family:inherit}.btn-copy:hover{background:rgba(196,73,98,.15)}.cs-hint{font-size:12px;color:var(--text-light);margin-top:12px;line-height:1.6}.footer{text-align:center;padding:36px 24px;border-top:1px solid var(--border);background:rgba(26,10,15,.9);position:relative}.footer p{font-size:13px;color:var(--text-light);margin-bottom:6px}.footer .tag{font-size:12px;color:var(--pink-deep);margin-bottom:8px}.footer .admin-link{font-size:12px;color:var(--text-light);text-decoration:none;opacity:.5;transition:var(--trs)}.footer .admin-link:hover{opacity:1;color:var(--brand)}.empty{text-align:center;padding:80px 24px;color:var(--text-light)}.empty .ic{font-size:48px;margin-bottom:16px;opacity:.3}.empty p{font-size:15px}@keyframes fadeUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}@media(max-width:1024px){.cat-grid{grid-template-columns:repeat(3,1fr);gap:20px}.cat-grid-bg{padding:32px 24px}}@media(max-width:768px){.header-inner{flex-direction:column;gap:10px;padding:12px 16px}.hero{padding:56px 20px 36px}.hero h2{font-size:28px}.modal-body{grid-template-columns:1fr}.gallery{padding:16px}.p-info{padding:16px 20px}.p-info h2{font-size:22px}.p-info .price{font-size:26px}.cat-grid{grid-template-columns:repeat(2,1fr);gap:14px}.cat-grid-bg{padding:24px 16px}.p-card-info{padding:12px 10px}.p-card-name{font-size:15px;white-space:normal;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical}.p-card-price{font-size:16px}}@media(max-width:480px){.cat-grid{grid-template-columns:1fr}.hero h2{font-size:24px}.cat-nav button{padding:6px 14px;font-size:13px}.cs-modal{padding:32px 20px}.brand-logo{width:40px;height:40px}.cat-section{padding:0 16px}}</style>
 </head>
 <body>
-
-<!-- ===== Background Decorations ===== -->
-<div class="bg-deco d1"></div>
-<div class="bg-deco d2"></div>
 
 <!-- ===== Header ===== -->
 <header class="header">
@@ -290,357 +98,328 @@ body{
   </div>
 </div>
 
-<script>
-/* ===== Sample Data ===== */
-var SP=[
-  {id:'p015',name:'丽波吮吸加温震动棒',images:['images/p002_1.jpg','images/p002_2.jpg','images/p002_3.jpg','images/p002_4.jpg','images/p002_5.jpg'],price:'67.9',stock:366,status:'published',category:'独处愉悦',description:'品牌：丽波 | 材质：ABS | 颜色：酒红色 | 吮吸+扣动+加温三重体验，长230mm宽32mm。静音设计最大噪音仅20dB。爱自己，从认真了解自己的身体开始。'},
-  {id:'p016',name:'丽波蠕动吮吸按摩棒',images:['images/p003_1.jpg','images/p003_2.jpg','images/p003_3.jpg','images/p003_4.jpg','images/p003_5.jpg'],price:'41.9',stock:50,status:'published',category:'独处愉悦',description:'品牌：丽波 | 材质：ABS | 蠕动吮吸双重刺激，静音设计。每一丝温柔的触碰，都是对自己的深情告白。'},
-  {id:'p017',name:'遥控仿真假阳具穿戴伸缩震动',images:['images/p017_1.jpg','images/p017_2.jpg','images/p017_3.jpg','images/p017_4.jpg','images/p017_5.jpg'],price:'78.4',stock:100,status:'published',category:'独处愉悦',description:'液态硅胶材质，自动加温无线遥控，双震动伸缩设计。仿真触感，温柔入体，让每一次独处都充满被拥抱的温度。'},
-  {id:'p018',name:'双鱼座葫芦三宝后庭肛塞',images:['images/p018_1.jpg','images/p018_2.jpg','images/p018_3.jpg','images/p018_4.jpg','images/p018_5.jpg'],price:'41.9',stock:100,status:'published',category:'男悦时光',description:'葫芦造型拉珠肛塞，渐进式探索体验。医用级硅胶材质，安全亲肤。从入门到进阶，每一次触碰都是新的发现。'},
-  {id:'p019',name:'花塞隐形穿戴无线遥控跳蛋',images:['images/p019_1.jpg','images/p019_2.jpg','images/p019_3.jpg','images/p019_4.jpg','images/p019_5.jpg'],price:'41.9',stock:100,status:'published',category:'独处愉悦',description:'隐形穿戴设计，无线遥控，静音马达。可以藏在日常的衣物里，让愉悦随时随地悄悄发生。做最懂自己的女人。'},
-  {id:'p020',name:'咕咕呆萌鸡吮吸跳蛋',images:['images/p020_1.jpg','images/p020_2.jpg','images/p020_3.jpg','images/p020_4.jpg','images/p020_5.jpg'],price:'41.9',stock:100,status:'published',category:'独处愉悦',description:'可爱萌趣造型，吮吸+震动双重模式。小巧便携，随时陪伴。认真取悦自己，从来不是一件需要害羞的事。'},
-  {id:'p021',name:'阴道哑铃凯格尔康复锻炼器',images:['images/p021_1.jpg','images/p021_2.jpg','images/p021_3.jpg','images/p021_4.jpg','images/p021_5.jpg'],price:'41.9',stock:100,status:'published',category:'私密护理',description:'科学设计盆底肌训练器，渐进式重量哑铃套装。守护产后恢复，提升内在紧致感。爱自己，从关注身体的每一处开始。'},
-  {id:'p022',name:'丽波兔震动加热自慰器',images:['images/p022_1.jpg','images/p022_2.jpg','images/p022_3.jpg','images/p022_4.jpg','images/p022_5.jpg'],price:'41.9',stock:100,status:'published',category:'独处愉悦',description:'兔耳造型精准刺激，多频震动+智能加温。静音设计，温柔包裹。每一个安静的夜晚，都值得被认真对待。'},
-  {id:'p023',name:'双鱼座45后庭遥控肛塞',images:['images/p023_1.jpg','images/p023_2.jpg','images/p023_3.jpg','images/p023_4.jpg','images/p023_5.jpg'],price:'41.9',stock:100,status:'published',category:'伴侣亲密',description:'双鱼座系列渐进式设计，遥控操作轻松控制。医用级硅胶，男女皆宜。和TA一起探索未知的边界，让亲密更进一步。'},
-  {id:'p024',name:'羽翼智能APP异地遥控跳蛋',images:['images/p024_1.jpg','images/p024_2.jpg','images/p024_3.jpg','images/p024_4.jpg','images/p024_5.jpg'],price:'196.7',stock:100,status:'published',category:'伴侣亲密',description:'智能APP远程控制，异地也能同步心跳。羽翼造型贴合身体曲线，多模式自定义。距离不再是障碍，每一次连接都是爱的告白。'},
-  {id:'p025',name:'秒潮吮吸跳蛋自慰器',images:['images/p025_1.jpg','images/p025_2.jpg','images/p025_3.jpg','images/p025_4.jpg','images/p025_5.jpg'],price:'41.9',stock:100,status:'published',category:'独处愉悦',description:'吮吸+入体双重刺激，秒速到达愉悦巅峰。多频可调节，找到属于自己的节奏。认真了解身体的每一处敏感，是对自己最深的温柔。'},
-  {id:'p026',name:'伸缩跳蛋无线遥控穿戴器',images:['images/p026_1.jpg','images/p026_2.jpg','images/p026_3.jpg','images/p026_4.jpg','images/p026_5.jpg'],price:'41.9',stock:100,status:'published',category:'独处愉悦',description:'伸缩+震动复合体验，无线遥控解放双手。可穿戴设计，随时随地享受私密愉悦。对自己好一点，从认真对待每一刻独处开始。'},
-  {id:'p027',name:'小甜心外出隐形穿戴跳蛋',images:['images/p027_1.jpg','images/p027_2.jpg','images/p027_3.jpg','images/p027_4.jpg','images/p027_5.jpg'],price:'54.9',stock:100,status:'published',category:'独处愉悦',description:'超薄隐形设计，外出也能悄悄享受。远程遥控互动，把控制权交给TA。在人群中藏着只有你们知道的秘密，每一次震动都是爱的暗号。'},
-  {id:'p028',name:'电击角斗士后庭前列腺按摩器',images:['images/p028_1.jpg','images/p028_2.jpg','images/p028_3.jpg','images/p028_4.jpg','images/p028_5.jpg'],price:'41.9',stock:100,status:'published',category:'男悦时光',description:'电击+震动双模式刺激，无线遥控精准按摩前列腺。角斗士造型符合人体工学，让男性也能体验前所未有的深层愉悦。关爱自己，不分性别。'},
-  {id:'p029',name:'全自动伸缩震动炮机仿真阳具遥控加温女性自慰器夫妻成人情趣用品(mx)',images:['images/p029.jpeg'],price:'172.8',stock:100,status:'published',category:'伴侣亲密',description:'全自动伸缩设计，仿真阳具触感，遥控加温功能。夫妻情趣必备，让亲密时刻更加热烈。'},
-  {id:'p030',name:'全自动女用伸缩震动炮机仿真阳具加温女性自慰器(mx)',images:['images/p030.jpeg'],price:'162',stock:100,status:'published',category:'独处愉悦',description:'全自动伸缩震动，仿真阳具加温设计。女用自慰神器，独处时也能享受极致愉悦。'},
-  {id:'p031',name:'女用自慰伸缩炮机加温震动棒仿真阳具全自动男女伸缩后庭按摩AV棒(mx)',images:['images/p031.jpeg'],price:'234',stock:100,status:'published',category:'独处愉悦',description:'多功能伸缩炮机，加温震动+后庭按摩。全自动设计，满足多种需求。'},
-  {id:'p032',name:'新款全自动伸缩震动炮机加温女性自慰器抽插入体成人情趣性用品(mx)',images:['images/p032.jpeg'],price:'197.4',stock:100,status:'published',category:'独处愉悦',description:'新款全自动伸缩炮机，加温设计让触感更真实。抽插式体验，让独处时光不再孤单。'},
-  {id:'p033',name:'强震炮机男女用自慰器自动伸缩电动打桩机阳具阴茎可伸缩玩具成人(mx)',images:['images/p033.jpeg'],price:'155.25',stock:100,status:'published',category:'独处愉悦',description:'强震马达动力十足，自动伸缩打桩机设计。男女皆宜，释放欲望的绝佳选择。'},
-  {id:'p034',name:'阿芙拉仿真阳具震动抽插小炮机女用自慰按摩棒免提加温成人性用品(mx)',images:['images/p034.jpeg'],price:'218.25',stock:100,status:'published',category:'独处愉悦',description:'阿芙拉品牌仿真阳具，震动抽插双模式。免提设计解放双手，加温功能更贴心。'},
-  {id:'p035',name:'阳具抱枕自动伸缩抽插电动肉棒成人女性自慰器仿真加热柔软静音(mx)',images:['images/p035.jpeg'],price:'257.25',stock:100,status:'published',category:'独处愉悦',description:'阳具抱枕设计，可抱可玩。自动伸缩抽插，仿真加热柔软触感，静音设计更私密。'},
-  {id:'p036',name:'全自动新款女用仿真阳具震动棒自慰器情侣专用玩具成人情趣性用品(mx)',images:['images/p036.jpeg'],price:'78.75',stock:100,status:'published',category:'伴侣亲密',description:'情侣专用仿真阳具震动棒，全自动操作。让两个人的亲密时刻更加丰富多彩。'},
-  {id:'p037',name:'穿戴空心龙骨阳具男女专用仿真超软阴茎拉拉夫妻情趣性用品(mx)',images:['images/p037.jpeg'],price:'216.3',stock:100,status:'published',category:'伴侣亲密',description:'穿戴式空心龙骨阳具，男女通用。仿真超软材质，拉拉夫妻情趣必备。'},
-  {id:'p038',name:'全自动新款仿真阳具手持震动炮机伸缩加温女用自慰器情趣成人(mx)',images:['images/p038.jpeg'],price:'174',stock:100,status:'published',category:'独处愉悦',description:'手持式仿真阳具炮机，全自动伸缩加温。小巧便携，随时随地享受私密时光。'},
-  {id:'p039',name:'阳具坐地炮机震动情趣用品仿真夫妻自慰器女用全自动成人伸缩抽插(mx)',images:['images/p039.png'],price:'175.5',stock:100,status:'published',category:'伴侣亲密',description:'坐地式炮机设计，解放双手。仿真夫妻共用，全自动伸缩抽插，体验更真实。'},
-  {id:'p040',name:'APP自动伸缩炮机震动棒女用异地遥控加温自慰器后庭阳具情趣用品(mx)',images:['images/p040.jpeg'],price:'105.9',stock:100,status:'published',category:'独处愉悦',description:'APP远程遥控，异地也能同步心跳。自动伸缩炮机，加温后庭双重刺激。'},
-  {id:'p041',name:'新品坐垫自动抽插震动炮机遥控控制加温成人女性自慰情趣用品(mx)',images:['images/p041.jpeg'],price:'120.75',stock:100,status:'published',category:'独处愉悦',description:'坐垫式设计，舒适坐享。自动抽插震动，遥控加温，让愉悦更随心所欲。'},
-  {id:'p042',name:'新款女性用成人高仿真阳具自动伸缩遥控震动加热超软自慰器性用品(mx)',images:['images/p042.jpeg'],price:'205.5',stock:100,status:'published',category:'独处愉悦',description:'高仿真阳具，超软材质触感真实。自动伸缩+遥控震动+加热功能，三重享受。'},
-  {id:'p043',name:'姬欲炮机震动棒女性自慰器充电全自动伸缩震动按摩棒成人情趣用品(mx)',images:['images/p043.jpeg'],price:'284.25',stock:100,status:'published',category:'独处愉悦',description:'姬欲品牌炮机，充电式全自动伸缩。震动按摩棒设计，专为女性打造的愉悦神器。'},
-  {id:'p044',name:'姬欲炮机全自动震动筋膜女性用品伸缩夫妻情趣成人性玩具自慰器(mx)',images:['images/p044.jpeg'],price:'118.35',stock:100,status:'published',category:'伴侣亲密',description:'姬欲全自动炮机，筋膜震动设计。夫妻情趣共用，让亲密时刻充满惊喜。'},
-  {id:'p045',name:'充电加温女用自慰器震动棒玩具电动仿真假阳具成人情趣夫妻性用品(mx)',images:['images/p045.jpeg'],price:'157.65',stock:100,status:'published',category:'伴侣亲密',description:'充电加温仿真阳具，女用自慰神器。夫妻共用设计，让两个人的温度同步。'},
-  {id:'p046',name:'全自动女用充电加温震动棒仿真体缩阳具遥控自慰器成人情趣性用品(mx)',images:['images/p046.jpeg'],price:'116.55',stock:100,status:'published',category:'独处愉悦',description:'仿真体缩阳具设计，充电加温更持久。全自动遥控操作，独处也能享受极致。'},
-  {id:'p047',name:'新款女性用成人高仿真阳具自动伸缩遥控震动加热超软自慰器性用品(mx)',images:['images/p047.jpeg'],price:'311.1',stock:100,status:'published',category:'独处愉悦',description:'高仿真阳具超软升级版，自动伸缩+遥控+震动+加热四合一。极致触感，极致享受。'},
-  {id:'p048',name:'肤感邦邦硬男用空心阴茎套软了能用狼牙套增大增粗振动穿戴假阳具(mx)',images:['images/p048.jpeg'],price:'205.5',stock:100,status:'published',category:'男悦时光',description:'男用空心阴茎套，肤感材质。狼牙纹理增大增粗，振动功能提升体验。'},
-  {id:'p049',name:'世界擎天炮机遥控免提伸缩震动加温女用自慰器抽插性爱充电情趣(mx)',images:['images/p049.jpeg'],price:'213.15',stock:100,status:'published',category:'独处愉悦',description:'世界擎天炮机遥控免提伸缩震动加温女用自慰器抽插性爱充电情趣，让每一刻都值得被认真对待。'},
-  {id:'p050',name:'新款便携提包小炮机男女用全自动伸缩抽插加热震动阳具打桩机后庭(mx)',images:['images/p050.jpeg'],price:'220.71',stock:100,status:'published',category:'独处愉悦',description:'新款便携提包小炮机男女用全自动伸缩抽插加热震动阳具打桩机后庭，让每一刻都值得被认真对待。'},
-  {id:'p051',name:'【谜姬】全自动伸缩女用震动av棒按摩自慰器成人情趣用品炮机性玩具(mx)',images:['images/p051.jpeg'],price:'162.62',stock:100,status:'published',category:'独处愉悦',description:'【谜姬】全自动伸缩女用震动av棒按摩自慰器成人情趣用品炮机性玩具，让每一刻都值得被认真对待。'},
-  {id:'p052',name:'新款女用自慰器伸缩加温按摩震动棒仿真阳具情趣成人用品充电玩具(mx)',images:['images/p052.png'],price:'90.42',stock:100,status:'published',category:'独处愉悦',description:'新款女用自慰器伸缩加温按摩震动棒仿真阳具情趣成人用品充电玩具，让每一刻都值得被认真对待。'},
-  {id:'p053',name:'可拆卸假阳具抱枕阳具玩偶性玩具自慰器隐蔽抱枕可躺(mx)',images:['images/p053.jpeg'],price:'248.81',stock:100,status:'published',category:'独处愉悦',description:'可拆卸假阳具抱枕阳具玩偶性玩具自慰器隐蔽抱枕可躺，让每一刻都值得被认真对待。'},
-  {id:'p054',name:'房事女性机器人女用自撸器夹腿自慰器老公阴茎gay阳具情趣用品(mx)',images:['images/p054.jpeg'],price:'375.45',stock:100,status:'published',category:'伴侣亲密',description:'房事女性机器人女用自撸器夹腿自慰器老公阴茎gay阳具情趣用品，让每一刻都值得被认真对待。'},
-  {id:'p055',name:'撸皮撸蛋仿真阳具假阴茎超软双层自卫器女用肉感超大粗成人用品(mx)',images:['images/p055.jpeg'],price:'118.8',stock:100,status:'published',category:'独处愉悦',description:'撸皮撸蛋仿真阳具假阴茎超软双层自卫器女用肉感超大粗成人用品，让每一刻都值得被认真对待。'},
-  {id:'p056',name:'AV双头电击点潮笔女用G点震动棒微电流刺激蜜豆女用成人情趣用品(mx)',images:['images/p056.jpeg'],price:'198.47',stock:100,status:'published',category:'独处愉悦',description:'AV双头电击点潮笔女用G点震动棒微电流刺激蜜豆女用成人情趣用品，让每一刻都值得被认真对待。'},
-  {id:'p057',name:'新款女士成人全自动震动棒入体式成人用品按摩调情房事情趣工具(mx)',images:['images/p057.jpeg'],price:'39.67',stock:100,status:'published',category:'伴侣亲密',description:'新款女士成人全自动震动棒入体式成人用品按摩调情房事情趣工具，让每一刻都值得被认真对待。'},
-  {id:'p058',name:'女用新款仿真阳具加温电动伸缩震动全自动情趣成人性用品无线遥控(mx)',images:['images/p058.jpeg'],price:'134.4',stock:100,status:'published',category:'独处愉悦',description:'女用新款仿真阳具加温电动伸缩震动全自动情趣成人性用品无线遥控，让每一刻都值得被认真对待。'},
-  {id:'p059',name:'全自动新款仿真自慰器电动阳具伸缩加温震动成人女用性用品情趣(mx)',images:['images/p059.jpeg'],price:'120.34',stock:100,status:'published',category:'独处愉悦',description:'全自动新款仿真自慰器电动阳具伸缩加温震动成人女用性用品情趣，让每一刻都值得被认真对待。'},
-  {id:'p060',name:'穿戴式空心假阳具男女专用仿真阳具超软假阴茎裤夫妻调情趣性用品(mx)',images:['images/p060.jpeg'],price:'119.28',stock:100,status:'published',category:'伴侣亲密',description:'穿戴式空心假阳具男女专用仿真阳具超软假阴茎裤夫妻调情趣性用品，让每一刻都值得被认真对待。'},
-  {id:'p061',name:'仿真阳具自慰器伸缩加温性感大头超软专用阳具女用自撸器夹腿(mx)',images:['images/p061.jpeg'],price:'116.52',stock:100,status:'published',category:'独处愉悦',description:'仿真阳具自慰器伸缩加温性感大头超软专用阳具女用自撸器夹腿，让每一刻都值得被认真对待。'},
-  {id:'p062',name:'男用仿真硅胶假阴茎情趣内裤自动加热震动双插玩法穿戴式(mx)',images:['images/p062.jpeg'],price:'108.3',stock:100,status:'published',category:'男悦时光',description:'男用仿真硅胶假阴茎情趣内裤自动加热震动双插玩法穿戴式，让每一刻都值得被认真对待。'},
-  {id:'p063',name:'无线遥控电动狼牙套蘑菇头硅胶狼牙套阳具套情侣用品情趣用品(mx)',images:['images/p063.jpeg'],price:'109.64',stock:100,status:'published',category:'伴侣亲密',description:'无线遥控电动狼牙套蘑菇头硅胶狼牙套阳具套情侣用品情趣用品，让每一刻都值得被认真对待。'},
-  {id:'p064',name:'阳具抱枕成人情趣性女用品假自慰器充气娃娃骑乘玩具可插阴茎坐骑(mx)',images:['images/p064.jpeg'],price:'431.75',stock:100,status:'published',category:'独处愉悦',description:'阳具抱枕成人情趣性女用品假自慰器充气娃娃骑乘玩具可插阴茎坐骑，让每一刻都值得被认真对待。'},
-  {id:'p065',name:'撸撸棒全自动震动棒G点刺激私处情侣强力插入式(mx)',images:['images/p065.jpeg'],price:'132.06',stock:100,status:'published',category:'伴侣亲密',description:'撸撸棒全自动震动棒G点刺激私处情侣强力插入式，让每一刻都值得被认真对待。'},
-  {id:'p066',name:'震动用品玩具女用刺激自慰器自慰成人炮机抽插阴蒂av私密性玩具(mx)',images:['images/p066.jpeg'],price:'124.44',stock:100,status:'published',category:'独处愉悦',description:'震动用品玩具女用刺激自慰器自慰成人炮机抽插阴蒂av私密性玩具，让每一刻都值得被认真对待。'},
-  {id:'p067',name:'【谜姬】全自动伸缩转珠震动棒自慰器加温成人玩具女性情趣按摩棒低音(mx)',images:['images/p067.jpeg'],price:'152.81',stock:100,status:'published',category:'独处愉悦',description:'【谜姬】全自动伸缩转珠震动棒自慰器加温成人玩具女性情趣按摩棒低音，让每一刻都值得被认真对待。'},
-  {id:'p068',name:'全自动伸缩成人仿真阳具女性阴茎专用自慰情趣神器情趣用品玩具(mx)',images:['images/p068.jpeg'],price:'111.09',stock:100,status:'published',category:'独处愉悦',description:'全自动伸缩成人仿真阳具女性阴茎专用自慰情趣神器情趣用品玩具，让每一刻都值得被认真对待。'},
-  {id:'p069',name:'情趣女用品阳具玩偶性玩具自慰器女性坐骑成人炮机娃娃可拆卸新款(mx)',images:['images/p069.jpeg'],price:'270.54',stock:100,status:'published',category:'独处愉悦',description:'情趣女用品阳具玩偶性玩具自慰器女性坐骑成人炮机娃娃可拆卸新款，让每一刻都值得被认真对待。'},
-  {id:'p070',name:'女用仿真阳具入珠无蛋龟头自慰器硅胶阴茎性用品后庭成人玩具情趣(mx)',images:['images/p070.jpeg'],price:'137.64',stock:100,status:'published',category:'独处愉悦',description:'女用仿真阳具入珠无蛋龟头自慰器硅胶阴茎性用品后庭成人玩具情趣，让每一刻都值得被认真对待。'},
-  {id:'p071',name:'男用仿真空心阳具硅胶阴茎狼牙套安全套成人情趣性用品(mx)',images:['images/p071.jpeg'],price:'24.7',stock:100,status:'published',category:'男悦时光',description:'男用仿真空心阳具硅胶阴茎狼牙套安全套成人情趣性用品，让每一刻都值得被认真对待。'},
-  {id:'p072',name:'自动伸缩炮机女用自慰器自动抽插震动棒振动阳具成人情趣性用品女(mx)',images:['images/p072.jpeg'],price:'157.84',stock:100,status:'published',category:'独处愉悦',description:'自动伸缩炮机女用自慰器自动抽插震动棒振动阳具成人情趣性用品女，让每一刻都值得被认真对待。'},
-  {id:'p073',name:'成人用品硅胶女用自慰器具舌舔G点按摩震动加热女性情趣用品(mx)',images:['images/p073.jpeg'],price:'93.28',stock:100,status:'published',category:'独处愉悦',description:'成人用品硅胶女用自慰器具舌舔G点按摩震动加热女性情趣用品，让每一刻都值得被认真对待。'},
-  {id:'p074',name:'充电加温女用自慰器震动棒自动玩具仿真阳具成人夫妻房事情趣工具(mx)',images:['images/p074.jpeg'],price:'106.09',stock:100,status:'published',category:'伴侣亲密',description:'充电加温女用自慰器震动棒自动玩具仿真阳具成人夫妻房事情趣工具，让每一刻都值得被认真对待。'},
-  {id:'p075',name:'女用全自动仿真加温阳具无线遥控伸缩震动电动情趣成人性用品女(mx)',images:['images/p075.jpeg'],price:'163.2',stock:100,status:'published',category:'独处愉悦',description:'女用全自动仿真加温阳具无线遥控伸缩震动电动情趣成人性用品女，让每一刻都值得被认真对待。'},
-  {id:'p076',name:'超爽新款保护私处护理玩具女用入体私处女款成年人护理情侣道具(mx)',images:['images/p076.jpeg'],price:'105.21',stock:100,status:'published',category:'私密护理',description:'超爽新款保护私处护理玩具女用入体私处女款成年人护理情侣道具，让每一刻都值得被认真对待。'},
-  {id:'p077',name:'【谜姬】震动全自动女用伸缩拍打静音女性自慰器情趣成人情趣用品玩具(mx)',images:['images/p077.jpeg'],price:'199.2',stock:100,status:'published',category:'独处愉悦',description:'【谜姬】震动全自动女用伸缩拍打静音女性自慰器情趣成人情趣用品玩具，让每一刻都值得被认真对待。'},
-  {id:'p078',name:'仿真阳具女用自慰器情趣性用品外出穿戴假阳具强力伸缩加温震动棒(mx)',images:['images/p078.jpeg'],price:'99.8',stock:100,status:'published',category:'独处愉悦',description:'仿真阳具女用自慰器情趣性用品外出穿戴假阳具强力伸缩加温震动棒，让每一刻都值得被认真对待。'},
-  {id:'p079',name:'超软女用手动阴茎仿真硅胶柔软阳具自慰器成人情趣性用品解压玩具(mx)',images:['images/p079.jpeg'],price:'108.02',stock:100,status:'published',category:'独处愉悦',description:'超软女用手动阴茎仿真硅胶柔软阳具自慰器成人情趣性用品解压玩具，让每一刻都值得被认真对待。'},
-  {id:'p080',name:'谜姬伸缩炮机女性震动全自动成人玩具加温情趣女用性用品自慰器(mx)',images:['images/p080.jpeg'],price:'185.59',stock:100,status:'published',category:'独处愉悦',description:'谜姬伸缩炮机女性震动全自动成人玩具加温情趣女用性用品自慰器，让每一刻都值得被认真对待。'},
-  {id:'p081',name:'成人夫妻情趣性用品穿戴男用假阴茎套仿真阳具硅胶套大空心套子(mx)',images:['images/p081.jpeg'],price:'66.28',stock:100,status:'published',category:'伴侣亲密',description:'成人夫妻情趣性用品穿戴男用假阴茎套仿真阳具硅胶套大空心套子，让每一刻都值得被认真对待。'},
-  {id:'p082',name:'姬欲全自动加温女用震动棒夫妻性自慰器伸缩舌舔玩具成人情趣用品(mx)',images:['images/p082.jpg'],price:'113.76',stock:100,status:'published',category:'伴侣亲密',description:'姬欲全自动加温女用震动棒夫妻性自慰器伸缩舌舔玩具成人情趣用品，让每一刻都值得被认真对待。'},
-  {id:'p083',name:'男女用双头龙假阳具仿真阴茎自慰器情趣成人玩具用品女性自卫一体(mx)',images:['images/p083.jpeg'],price:'355.63',stock:100,status:'published',category:'伴侣亲密',description:'男女用双头龙假阳具仿真阴茎自慰器情趣成人玩具用品女性自卫一体，让每一刻都值得被认真对待。'},
-  {id:'p084',name:'莱斯帕蒂女用充电震动棒迷你可爱按摩棒跳蛋宿舍静音成人情趣用品(mx)',images:['images/p084.jpeg'],price:'84.61',stock:100,status:'published',category:'独处愉悦',description:'莱斯帕蒂女用充电震动棒迷你可爱按摩棒跳蛋宿舍静音成人情趣用品，让每一刻都值得被认真对待。'},
-  {id:'p085',name:'双头震动充电自慰便携AV女用情趣性用品按摩棒器具成人情趣用品(mx)',images:['images/p085.jpeg'],price:'87.3',stock:100,status:'published',category:'独处愉悦',description:'双头震动充电自慰便携AV女用情趣性用品按摩棒器具成人情趣用品，让每一刻都值得被认真对待。'},
-  {id:'p086',name:'全自动充电伸缩震动棒女性用自慰器仿真阳具夫妻成人情趣性用品(mx)',images:['images/p086.jpeg'],price:'59.07',stock:100,status:'published',category:'伴侣亲密',description:'全自动充电伸缩震动棒女性用自慰器仿真阳具夫妻成人情趣性用品，让每一刻都值得被认真对待。'},
-  {id:'p087',name:'丽波天蝎座充电女用震动棒女性自卫器成人情趣性用品情趣震动棒(mx)',images:['images/p087.jpeg'],price:'109.64',stock:100,status:'published',category:'独处愉悦',description:'丽波天蝎座充电女用震动棒女性自卫器成人情趣性用品情趣震动棒，让每一刻都值得被认真对待。'},
-  {id:'p088',name:'男女用les穿戴阳具加温鸡把t拉拉内裤假阴茎同性恋性工具情趣用品(mx)',images:['images/p088.jpeg'],price:'134.31',stock:100,status:'published',category:'伴侣亲密',description:'男女用les穿戴阳具加温鸡把t拉拉内裤假阴茎同性恋性工具情趣用品，让每一刻都值得被认真对待。'},
-  {id:'p089',name:'男用空心阳具电动无线遥控加长硅胶阴茎狼牙套震动情趣情趣用品(mx)',images:['images/p089.jpeg'],price:'99.11',stock:100,status:'published',category:'男悦时光',description:'男用空心阳具电动无线遥控加长硅胶阴茎狼牙套震动情趣情趣用品，让每一刻都值得被认真对待。'},
-  {id:'p090',name:'延时喷剂男用男士延时喷剂(mx)',images:['images/p090.jpg'],price:'181.86',stock:100,status:'published',category:'男悦时光',description:'延时喷剂男用男士延时喷剂，让每一刻都值得被认真对待。'},
-  {id:'p091',name:'前列腺男用自动抽插炮机伪娘按摩伸缩肛塞gay高潮情趣用品插屁股(mx)',images:['images/p091.jpeg'],price:'71.99',stock:100,status:'published',category:'私密护理',description:'前列腺男用自动抽插炮机伪娘按摩伸缩肛塞gay高潮情趣用品插屁股，让每一刻都值得被认真对待。'},
-  {id:'p092',name:'【谜姬】萌喵外出穿戴控制远程遥控女用自慰器性用品成人情趣异地玩具(mx)',images:['images/p092.jpeg'],price:'64.73',stock:100,status:'published',category:'私密护理',description:'【谜姬】萌喵外出穿戴控制远程遥控女用自慰器性用品成人情趣异地玩具，让每一刻都值得被认真对待。'},
-  {id:'p093',name:'无线遥控电动狼牙套加长硅胶阴茎套震动空心套柔软阳具套情趣用品(mx)',images:['images/p093.jpeg'],price:'73.77',stock:100,status:'published',category:'伴侣亲密',description:'无线遥控电动狼牙套加长硅胶阴茎套震动空心套柔软阳具套情趣用品，让每一刻都值得被认真对待。'},
-  {id:'p094',name:'成人夫妻情趣性用品穿戴男用假阴茎套仿真阳具硅胶套大空心套子(mx)',images:['images/p094.jpeg'],price:'66.29',stock:100,status:'published',category:'伴侣亲密',description:'成人夫妻情趣性用品穿戴男用假阴茎套仿真阳具硅胶套大空心套子，让每一刻都值得被认真对待。'},
-  {id:'p095',name:'双头震动高潮棒女性情趣用品速热增强激情拉拉同性阳具仿真女同(mx)',images:['images/p095.jpeg'],price:'95.49',stock:100,status:'published',category:'伴侣亲密',description:'双头震动高潮棒女性情趣用品速热增强激情拉拉同性阳具仿真女同，让每一刻都值得被认真对待。'},
-  {id:'p096',name:'女用假阳具按摩棒自慰器兔子G点震动棒女性情趣成人性用品代批发(mx)',images:['images/p096.jpg'],price:'83.97',stock:100,status:'published',category:'独处愉悦',description:'女用假阳具按摩棒自慰器兔子G点震动棒女性情趣成人性用品代批发，让每一刻都值得被认真对待。'},
-  {id:'p097',name:'新款双头龙震动棒女用拉拉自慰器内置加热穿戴阳具成人情趣用品(mx)',images:['images/p097.jpeg'],price:'270.20',stock:100,status:'published',category:'伴侣亲密',description:'新款双头龙震动棒女用拉拉自慰器内置加热穿戴阳具成人情趣用品，让每一刻都值得被认真对待。'},
-  {id:'p098',name:'充电加温女用自慰器震动棒自动玩具仿真阳具成人夫妻房事情趣工具(mx)',images:['images/p098.jpeg'],price:'106.10',stock:100,status:'published',category:'私密护理',description:'充电加温女用自慰器震动棒自动玩具仿真阳具成人夫妻房事情趣工具，让每一刻都值得被认真对待。'},
-  {id:'p099',name:'新款双震成人高仿真阳具无线遥控伸缩加热超软自慰器夫妻情性用品(mx)',images:['images/p099.jpeg'],price:'77.90',stock:100,status:'published',category:'独处愉悦',description:'新款双震成人高仿真阳具无线遥控伸缩加热超软自慰器夫妻情性用品，让每一刻都值得被认真对待。'},
-  {id:'p100',name:'阳具自动伸缩抽插女用成人仿真电动自慰器加热宿舍静音遥控炮机(mx)',images:['images/p100.jpeg'],price:'263.48',stock:100,status:'published',category:'独处愉悦',description:'阳具自动伸缩抽插女用成人仿真电动自慰器加热宿舍静音遥控炮机，让每一刻都值得被认真对待。'},
-  {id:'p101',name:'真牛皮sm捆绑束缚套装情趣道具女用品调教女朋友双人互动手铐成人(mx)',images:['images/p101.jpeg'],price:'296.31',stock:100,status:'published',category:'仪式氛围',description:'真牛皮sm捆绑束缚套装情趣道具女用品调教女朋友双人互动手铐成人，让每一刻都值得被认真对待。'},
-  {id:'p102',name:'GALAKU正品全自动仿真阳具自慰器女用大功率情侣房事调情趣性玩具(mx)',images:['images/p102.jpeg'],price:'75.77',stock:100,status:'published',category:'独处愉悦',description:'GALAKU正品全自动仿真阳具自慰器女用大功率情侣房事调情趣性玩具，让每一刻都值得被认真对待。'},
-  {id:'p103',name:'新款女性用成人高仿真阳具自动伸缩遥控震动加热超软自慰器性用品(mx)',images:['images/p103.jpeg'],price:'157.61',stock:100,status:'published',category:'独处愉悦',description:'新款女性用成人高仿真阳具自动伸缩遥控震动加热超软自慰器性用品，让每一刻都值得被认真对待。'},
-  {id:'p104',name:'情趣女用品阳具玩偶性玩具自慰器女性坐骑成人炮机娃娃可拆卸新款(mx)',images:['images/p104.jpeg'],price:'270.54',stock:100,status:'published',category:'独处愉悦',description:'情趣女用品阳具玩偶性玩具自慰器女性坐骑成人炮机娃娃可拆卸新款，让每一刻都值得被认真对待。'},
-  {id:'p105',name:'震动用品玩具女用刺激自慰器自慰成人炮机抽插阴蒂av私密性玩具(mx)',images:['images/p105.jpeg'],price:'124.44',stock:100,status:'published',category:'独处愉悦',description:'震动用品玩具女用刺激自慰器自慰成人炮机抽插阴蒂av私密性玩具，让每一刻都值得被认真对待。'},
-  {id:'p106',name:'全自动女用充电加温震动棒仿真体缩阳具遥控自慰器成人情趣性用品(mx)',images:['images/p106.png'],price:'118.32',stock:100,status:'published',category:'独处愉悦',description:'全自动女用充电加温震动棒仿真体缩阳具遥控自慰器成人情趣性用品，让每一刻都值得被认真对待。'},
-  {id:'p107',name:'飞机杯倒模男用gay同志自慰器屁股肛门可插入仿真阳具女自慰用品(mx)',images:['images/p107.jpeg'],price:'311.15',stock:100,status:'published',category:'男悦时光',description:'飞机杯倒模男用gay同志自慰器屁股肛门可插入仿真阳具女自慰用品，让每一刻都值得被认真对待。'},
-  {id:'p108',name:'sm道具重度另类手铐捆绑束缚枷夫妻调情刑具调教室悬吊惩罚金属杆(mx)',images:['images/p108.jpeg'],price:'339.75',stock:100,status:'published',category:'仪式氛围',description:'sm道具重度另类手铐捆绑束缚枷夫妻调情刑具调教室悬吊惩罚金属杆，让每一刻都值得被认真对待。'},
-  {id:'p109',name:'莱斯帕蒂震动棒女用按摩棒强力震动变频静音大头AV棒成人情趣用品(mx)',images:['images/p109.png'],price:'99.94',stock:100,status:'published',category:'独处愉悦',description:'莱斯帕蒂震动棒女用按摩棒强力震动变频静音大头AV棒成人情趣用品，认真了解自己，也认真爱自己。'},
-  {id:'p110',name:'震动棒自慰棒仿真大号女性情趣成人用品强震大头柔软G点解压神器(mx)',images:['images/p110.jpg'],price:'96.75',stock:100,status:'published',category:'独处愉悦',description:'震动棒自慰棒仿真大号女性情趣成人用品强震大头柔软G点解压神器，认真了解自己，也认真爱自己。'},
-  {id:'p111',name:'点潮女用品震动女用按摩自慰器性玩具强震点高潮女性成人情趣神器(mx)',images:['images/p111.jpg'],price:'73.52',stock:100,status:'published',category:'独处愉悦',description:'点潮女用品震动女用按摩自慰器性玩具强震点高潮女性成人情趣神器，认真了解自己，也认真爱自己。'},
-  {id:'p112',name:'姬欲全自动伸缩炮机女用震动棒强震情趣用品自慰器成人玩具按摩av(mx)',images:['images/p112.jpg'],price:'178.8',stock:100,status:'published',category:'独处愉悦',description:'姬欲全自动伸缩炮机女用震动棒强震情趣用品自慰器成人玩具按摩av，认真了解自己，也认真爱自己。'},
-  {id:'p113',name:'全自动充电震动玩具加温女用自慰器仿真阳具伸缩成人情趣夫妻(mx)',images:['images/p113.jpg'],price:'78.75',stock:100,status:'published',category:'伴侣亲密',description:'全自动充电震动玩具加温女用自慰器仿真阳具伸缩成人情趣夫妻，认真了解自己，也认真爱自己。'},
-  {id:'p114',name:'全自动电动仿真阳具加温伸缩女用震动成人自慰器情趣性用品玩具(mx)',images:['images/p114.jpg'],price:'87.15',stock:100,status:'published',category:'独处愉悦',description:'全自动电动仿真阳具加温伸缩女用震动成人自慰器情趣性用品玩具，认真了解自己，也认真爱自己。'},
-  {id:'p115',name:'姬欲新款女用上位阳具伸缩坐骑炮机玩具情趣用品自慰器坐式震动棒(mx)',images:['images/p115.jpg'],price:'125.77',stock:100,status:'published',category:'独处愉悦',description:'姬欲新款女用上位阳具伸缩坐骑炮机玩具情趣用品自慰器坐式震动棒，认真了解自己，也认真爱自己。'},
-  {id:'p116',name:'全自动男女炮机阳具APP自慰器打桩机女用后庭异地遥控(mx)',images:['images/p116.jpg'],price:'177.3',stock:100,status:'published',category:'独处愉悦',description:'全自动男女炮机阳具APP自慰器打桩机女用后庭异地遥控，认真了解自己，也认真爱自己。'},
-  {id:'p117',name:'Orgie奥姬延时喷剂男用品持久延迟喷雾正品延长延时喷剂成人情趣(mx)',images:['images/p117.jpg'],price:'142.08',stock:100,status:'published',category:'男悦时光',description:'Orgie奥姬延时喷剂男用品持久延迟喷雾正品延长延时喷剂成人情趣，认真了解自己，也认真爱自己。'},
-  {id:'p118',name:'女用自慰5.3kg肌肉男模仿真阳具可拆卸假阴茎半身实体女自慰娃娃(mx)',images:['images/p118.png'],price:'493.11',stock:100,status:'published',category:'男悦时光',description:'女用自慰5.3kg肌肉男模仿真阳具可拆卸假阴茎半身实体女自慰娃娃，认真了解自己，也认真爱自己。'},
-  {id:'p119',name:'震动自慰器男用av震动棒自动性用品情趣sm自慰器按摩棒成人用品(mx)',images:['images/p119.png'],price:'86.1',stock:100,status:'published',category:'男悦时光',description:'震动自慰器男用av震动棒自动性用品情趣sm自慰器按摩棒成人用品，认真了解自己，也认真爱自己。'},
-  {id:'p120',name:'AAV新款女士震动棒高级潮款入体高频撩逗加热女用自慰器成人用品(mx)',images:['images/p120.png'],price:'185.46',stock:100,status:'published',category:'独处愉悦',description:'AAV新款女士震动棒高级潮款入体高频撩逗加热女用自慰器成人用品，认真了解自己，也认真爱自己。'},
-  {id:'p121',name:'女士成人快乐玩具 仿真电动摇摆震动棒 自慰器情趣用品 私密发货(mx)',images:['images/p121.jpg'],price:'218.31',stock:100,status:'published',category:'独处愉悦',description:'女士成人快乐玩具 仿真电动摇摆震动棒 自慰器情趣用品 私密发货，认真了解自己，也认真爱自己。'},
-  {id:'p122',name:'震动超爽全自动私处女用护理小巧迷你神器情侣按摩棒av性玩具(mx)',images:['images/p122.jpg'],price:'122.97',stock:100,status:'published',category:'私密护理',description:'震动超爽全自动私处女用护理小巧迷你神器情侣按摩棒av性玩具，认真了解自己，也认真爱自己。'},
-  {id:'p123',name:'成人夫妻情趣性用品穿戴男用假阴茎异形阳具硅胶套加大加厚空心套(mx)',images:['images/p123.jpg'],price:'64.36',stock:100,status:'published',category:'男悦时光',description:'成人夫妻情趣性用品穿戴男用假阴茎异形阳具硅胶套加大加厚空心套，认真了解自己，也认真爱自己。'},
-  {id:'p124',name:'仙女震动棒正品超软变形女性用品情趣发泄工具双震硅胶成人用品(mx)',images:['images/p124.jpg'],price:'197.24',stock:100,status:'published',category:'独处愉悦',description:'仙女震动棒正品超软变形女性用品情趣发泄工具双震硅胶成人用品，认真了解自己，也认真爱自己。'},
-  {id:'p125',name:'情趣公仔抱枕女用炮机震动棒闺蜜送礼毛绒玩具成人性用品静音(mx)',images:['images/p125.jpg'],price:'303.3',stock:100,status:'published',category:'仪式氛围',description:'情趣公仔抱枕女用炮机震动棒闺蜜送礼毛绒玩具成人性用品静音，认真了解自己，也认真爱自己。'},
-  {id:'p126',name:'谜姬智控樱花乳夹震动电击乳房按摩前戏挑逗调情女用自慰器SM道具(mx)',images:['images/p126.jpg'],price:'124.95',stock:100,status:'published',category:'仪式氛围',description:'谜姬智控樱花乳夹震动电击乳房按摩前戏挑逗调情女用自慰器SM道具，认真了解自己，也认真爱自己。'},
-  {id:'p127',name:'房事女性机器女用自撸器夹腿自慰器老公阴茎gay阳具情趣用品(mx)',images:['images/p127.jpg'],price:'375.45',stock:100,status:'published',category:'男悦时光',description:'房事女性机器女用自撸器夹腿自慰器老公阴茎gay阳具情趣用品，认真了解自己，也认真爱自己。'},
-  {id:'p128',name:'新款女士成全自动震动棒入体式成用品按摩调情房事情趣工具(mx)',images:['images/p128.jpg'],price:'39.67',stock:100,status:'published',category:'独处愉悦',description:'新款女士成全自动震动棒入体式成用品按摩调情房事情趣工具，认真了解自己，也认真爱自己。'},
-  {id:'p129',name:'爱世界威霸炮机电动遥控震动伸缩加温免提自慰伸缩炮机全自动可躺(mx)',images:['images/p129_1.jpg'],price:'219.7',stock:100,status:'published',category:'独处愉悦',description:'全自动可躺设计，电动遥控震动伸缩加温免提。品质保障，私密发货。'},
-  {id:'p130',name:'插电女用炮机全自动抽插伸缩震动电动加温仿真阳具男女自慰器后庭(mx)',images:['images/p130_1.jpg'],price:'105',stock:100,status:'published',category:'独处愉悦',description:'插电式设计，全自动抽插伸缩震动，仿真阳具电动加温。品质保障，私密发货。'},
-  {id:'p131',name:'全自动震动棒女用电动自慰器阳具加温成人情趣仿真夫妻性用品玩具(mx)',images:['images/p131_1.jpg'],price:'113.1',stock:100,status:'published',category:'独处愉悦',description:'全自动震动设计，女用电动自慰器，仿真阳具加温。品质保障，私密发货。'},
-  {id:'p132',name:'女上位阳具坐骑玩具成人情趣性女用品骑乘炮机自慰器男坐式震动棒(mx)',images:['images/p132_1.jpg'],price:'217.6',stock:100,status:'published',category:'独处愉悦',description:'女上位坐骑设计，成人情趣用品，骑乘炮机自慰器。品质保障，私密发货。'},
-  {id:'p133',name:'成人性玩具男女夫妻共用男士穿戴假阳具双人双插两性喷水阴茎情趣(mx)',images:['images/p132_1.jpg'],price:'75.3',stock:100,status:'published',category:'伴侣亲密',description:'男女夫妻共用设计，男士穿戴假阳具，双人双插玩法。品质保障，私密发货。'},
-  {id:'p134',name:'假成人充气娃娃自慰器坐骑性玩具女用品玩偶情趣抱枕女性炮机阳具(mx)',images:['images/p132_1.jpg'],price:'245.4',stock:100,status:'published',category:'独处愉悦',description:'仿真充气娃娃设计，坐骑性玩具，女用自慰器玩偶抱枕。品质保障，私密发货。'}
+<script>var SP=[
+{id:'p015',name:'丽波吮吸加温震动棒',images:['images/p002_1.jpg','images/p002_2.jpg','images/p002_3.jpg','images/p002_4.jpg','images/p002_5.jpg'],price:'67.9',stock:366,status:'published',category:'独处愉悦',description:'品牌：丽波 | 材质：ABS | 颜色：酒红色 | 吮吸+扣动+加温三重体验，长230mm宽32mm。静音设计最大噪音仅20dB。爱自己，从认真了解自己的身体开始。'},
+{id:'p016',name:'丽波蠕动吮吸按摩棒',images:['images/p003_1.jpg','images/p003_2.jpg','images/p003_3.jpg','images/p003_4.jpg','images/p003_5.jpg'],price:'41.9',stock:50,status:'published',category:'独处愉悦',description:'品牌：丽波 | 材质：ABS | 蠕动吮吸双重刺激，静音设计。每一丝温柔的触碰，都是对自己的深情告白。'},
+{id:'p017',name:'遥控仿真假阳具穿戴伸缩震动',images:['images/p017_1.jpg','images/p017_2.jpg','images/p017_3.jpg','images/p017_4.jpg','images/p017_5.jpg'],price:'78.4',stock:100,status:'published',category:'独处愉悦',description:'液态硅胶材质，自动加温无线遥控，双震动伸缩设计。仿真触感，温柔入体，让每一次独处都充满被拥抱的温度。'},
+{id:'p018',name:'双鱼座葫芦三宝后庭肛塞',images:['images/p018_1.jpg','images/p018_2.jpg','images/p018_3.jpg','images/p018_4.jpg','images/p018_5.jpg'],price:'41.9',stock:100,status:'published',category:'男悦时光',description:'葫芦造型拉珠肛塞，渐进式探索体验。医用级硅胶材质，安全亲肤。从入门到进阶，每一次触碰都是新的发现。'},
+{id:'p019',name:'花塞隐形穿戴无线遥控跳蛋',images:['images/p019_1.jpg','images/p019_2.jpg','images/p019_3.jpg','images/p019_4.jpg','images/p019_5.jpg'],price:'41.9',stock:100,status:'published',category:'独处愉悦',description:'隐形穿戴设计，无线遥控，静音马达。可以藏在日常的衣物里，让愉悦随时随地悄悄发生。做最懂自己的女人。'},
+{id:'p020',name:'咕咕呆萌鸡吮吸跳蛋',images:['images/p020_1.jpg','images/p020_2.jpg','images/p020_3.jpg','images/p020_4.jpg','images/p020_5.jpg'],price:'41.9',stock:100,status:'published',category:'独处愉悦',description:'可爱萌趣造型，吮吸+震动双重模式。小巧便携，随时陪伴。认真取悦自己，从来不是一件需要害羞的事。'},
+{id:'p021',name:'阴道哑铃凯格尔康复锻炼器',images:['images/p021_1.jpg','images/p021_2.jpg','images/p021_3.jpg','images/p021_4.jpg','images/p021_5.jpg'],price:'41.9',stock:100,status:'published',category:'私密护理',description:'科学设计盆底肌训练器，渐进式重量哑铃套装。守护产后恢复，提升内在紧致感。爱自己，从关注身体的每一处开始。'},
+{id:'p022',name:'丽波兔震动加热自慰器',images:['images/p022_1.jpg','images/p022_2.jpg','images/p022_3.jpg','images/p022_4.jpg','images/p022_5.jpg'],price:'41.9',stock:100,status:'published',category:'独处愉悦',description:'兔耳造型精准刺激，多频震动+智能加温。静音设计，温柔包裹。每一个安静的夜晚，都值得被认真对待。'},
+{id:'p023',name:'双鱼座45后庭遥控肛塞',images:['images/p023_1.jpg','images/p023_2.jpg','images/p023_3.jpg','images/p023_4.jpg','images/p023_5.jpg'],price:'41.9',stock:100,status:'published',category:'伴侣亲密',description:'双鱼座系列渐进式设计，遥控操作轻松控制。医用级硅胶，男女皆宜。和TA一起探索未知的边界，让亲密更进一步。'},
+{id:'p024',name:'羽翼智能APP异地遥控跳蛋',images:['images/p024_1.jpg','images/p024_2.jpg','images/p024_3.jpg','images/p024_4.jpg','images/p024_5.jpg'],price:'196.7',stock:100,status:'published',category:'伴侣亲密',description:'智能APP远程控制，异地也能同步心跳。羽翼造型贴合身体曲线，多模式自定义。距离不再是障碍，每一次连接都是爱的告白。'},
+{id:'p025',name:'秒潮吮吸跳蛋自慰器',images:['images/p025_1.jpg','images/p025_2.jpg','images/p025_3.jpg','images/p025_4.jpg','images/p025_5.jpg'],price:'41.9',stock:100,status:'published',category:'独处愉悦',description:'吮吸+入体双重刺激，秒速到达愉悦巅峰。多频可调节，找到属于自己的节奏。认真了解身体的每一处敏感，是对自己最深的温柔。'},
+{id:'p026',name:'伸缩跳蛋无线遥控穿戴器',images:['images/p026_1.jpg','images/p026_2.jpg','images/p026_3.jpg','images/p026_4.jpg','images/p026_5.jpg'],price:'41.9',stock:100,status:'published',category:'独处愉悦',description:'伸缩+震动复合体验，无线遥控解放双手。可穿戴设计，随时随地享受私密愉悦。对自己好一点，从认真对待每一刻独处开始。'},
+{id:'p027',name:'小甜心外出隐形穿戴跳蛋',images:['images/p027_1.jpg','images/p027_2.jpg','images/p027_3.jpg','images/p027_4.jpg','images/p027_5.jpg'],price:'54.9',stock:100,status:'published',category:'独处愉悦',description:'超薄隐形设计，外出也能悄悄享受。远程遥控互动，把控制权交给TA。在人群中藏着只有你们知道的秘密，每一次震动都是爱的暗号。'},
+{id:'p028',name:'电击角斗士后庭前列腺按摩器',images:['images/p028_1.jpg','images/p028_2.jpg','images/p028_3.jpg','images/p028_4.jpg','images/p028_5.jpg'],price:'41.9',stock:100,status:'published',category:'男悦时光',description:'电击+震动双模式刺激，无线遥控精准按摩前列腺。角斗士造型符合人体工学，让男性也能体验前所未有的深层愉悦。关爱自己，不分性别。'},
+{id:'p029',name:'全自动伸缩震动炮机仿真阳具遥控加温女性自慰器夫妻成人情趣用品(mx)',images:['images/p029.jpeg'],price:'172.8',stock:100,status:'published',category:'伴侣亲密',description:'全自动伸缩设计，仿真阳具触感，遥控加温功能。夫妻情趣必备，让亲密时刻更加热烈。'},
+{id:'p030',name:'全自动女用伸缩震动炮机仿真阳具加温女性自慰器(mx)',images:['images/p030.jpeg'],price:'162',stock:100,status:'published',category:'独处愉悦',description:'全自动伸缩震动，仿真阳具加温设计。女用自慰神器，独处时也能享受极致愉悦。'},
+{id:'p031',name:'女用自慰伸缩炮机加温震动棒仿真阳具全自动男女伸缩后庭按摩AV棒(mx)',images:['images/p031.jpeg'],price:'234',stock:100,status:'published',category:'独处愉悦',description:'多功能伸缩炮机，加温震动+后庭按摩。全自动设计，满足多种需求。'},
+{id:'p032',name:'新款全自动伸缩震动炮机加温女性自慰器抽插入体成人情趣性用品(mx)',images:['images/p032.jpeg'],price:'197.4',stock:100,status:'published',category:'独处愉悦',description:'新款全自动伸缩炮机，加温设计让触感更真实。抽插式体验，让独处时光不再孤单。'},
+{id:'p033',name:'强震炮机男女用自慰器自动伸缩电动打桩机阳具阴茎可伸缩玩具成人(mx)',images:['images/p033.jpeg'],price:'155.25',stock:100,status:'published',category:'独处愉悦',description:'强震马达动力十足，自动伸缩打桩机设计。男女皆宜，释放欲望的绝佳选择。'},
+{id:'p034',name:'阿芙拉仿真阳具震动抽插小炮机女用自慰按摩棒免提加温成人性用品(mx)',images:['images/p034.jpeg'],price:'218.25',stock:100,status:'published',category:'独处愉悦',description:'阿芙拉品牌仿真阳具，震动抽插双模式。免提设计解放双手，加温功能更贴心。'},
+{id:'p035',name:'阳具抱枕自动伸缩抽插电动肉棒成人女性自慰器仿真加热柔软静音(mx)',images:['images/p035.jpeg'],price:'257.25',stock:100,status:'published',category:'独处愉悦',description:'阳具抱枕设计，可抱可玩。自动伸缩抽插，仿真加热柔软触感，静音设计更私密。'},
+{id:'p036',name:'全自动新款女用仿真阳具震动棒自慰器情侣专用玩具成人情趣性用品(mx)',images:['images/p036.jpeg'],price:'78.75',stock:100,status:'published',category:'伴侣亲密',description:'情侣专用仿真阳具震动棒，全自动操作。让两个人的亲密时刻更加丰富多彩。'},
+{id:'p037',name:'穿戴空心龙骨阳具男女专用仿真超软阴茎拉拉夫妻情趣性用品(mx)',images:['images/p037.jpeg'],price:'216.3',stock:100,status:'published',category:'伴侣亲密',description:'穿戴式空心龙骨阳具，男女通用。仿真超软材质，拉拉夫妻情趣必备。'},
+{id:'p038',name:'全自动新款仿真阳具手持震动炮机伸缩加温女用自慰器情趣成人(mx)',images:['images/p038.jpeg'],price:'174',stock:100,status:'published',category:'独处愉悦',description:'手持式仿真阳具炮机，全自动伸缩加温。小巧便携，随时随地享受私密时光。'},
+{id:'p039',name:'阳具坐地炮机震动情趣用品仿真夫妻自慰器女用全自动成人伸缩抽插(mx)',images:['images/p039.png'],price:'175.5',stock:100,status:'published',category:'伴侣亲密',description:'坐地式炮机设计，解放双手。仿真夫妻共用，全自动伸缩抽插，体验更真实。'},
+{id:'p040',name:'APP自动伸缩炮机震动棒女用异地遥控加温自慰器后庭阳具情趣用品(mx)',images:['images/p040.jpeg'],price:'105.9',stock:100,status:'published',category:'独处愉悦',description:'APP远程遥控，异地也能同步心跳。自动伸缩炮机，加温后庭双重刺激。'},
+{id:'p041',name:'新品坐垫自动抽插震动炮机遥控控制加温成人女性自慰情趣用品(mx)',images:['images/p041.jpeg'],price:'120.75',stock:100,status:'published',category:'独处愉悦',description:'坐垫式设计，舒适坐享。自动抽插震动，遥控加温，让愉悦更随心所欲。'},
+{id:'p042',name:'新款女性用成人高仿真阳具自动伸缩遥控震动加热超软自慰器性用品(mx)',images:['images/p042.jpeg'],price:'205.5',stock:100,status:'published',category:'独处愉悦',description:'高仿真阳具，超软材质触感真实。自动伸缩+遥控震动+加热功能，三重享受。'},
+{id:'p043',name:'姬欲炮机震动棒女性自慰器充电全自动伸缩震动按摩棒成人情趣用品(mx)',images:['images/p043.jpeg'],price:'284.25',stock:100,status:'published',category:'独处愉悦',description:'姬欲品牌炮机，充电式全自动伸缩。震动按摩棒设计，专为女性打造的愉悦神器。'},
+{id:'p044',name:'姬欲炮机全自动震动筋膜女性用品伸缩夫妻情趣成人性玩具自慰器(mx)',images:['images/p044.jpeg'],price:'118.35',stock:100,status:'published',category:'伴侣亲密',description:'姬欲全自动炮机，筋膜震动设计。夫妻情趣共用，让亲密时刻充满惊喜。'},
+{id:'p045',name:'充电加温女用自慰器震动棒玩具电动仿真假阳具成人情趣夫妻性用品(mx)',images:['images/p045.jpeg'],price:'157.65',stock:100,status:'published',category:'伴侣亲密',description:'充电加温仿真阳具，女用自慰神器。夫妻共用设计，让两个人的温度同步。'},
+{id:'p046',name:'全自动女用充电加温震动棒仿真体缩阳具遥控自慰器成人情趣性用品(mx)',images:['images/p046.jpeg'],price:'116.55',stock:100,status:'published',category:'独处愉悦',description:'仿真体缩阳具设计，充电加温更持久。全自动遥控操作，独处也能享受极致。'},
+{id:'p047',name:'新款女性用成人高仿真阳具自动伸缩遥控震动加热超软自慰器性用品(mx)',images:['images/p047.jpeg'],price:'311.1',stock:100,status:'published',category:'独处愉悦',description:'高仿真阳具超软升级版，自动伸缩+遥控+震动+加热四合一。极致触感，极致享受。'},
+{id:'p048',name:'肤感邦邦硬男用空心阴茎套软了能用狼牙套增大增粗振动穿戴假阳具(mx)',images:['images/p048.jpeg'],price:'205.5',stock:100,status:'published',category:'男悦时光',description:'男用空心阴茎套，肤感材质。狼牙纹理增大增粗，振动功能提升体验。'},
+{id:'p049',name:'世界擎天炮机遥控免提伸缩震动加温女用自慰器抽插性爱充电情趣(mx)',images:['images/p049.jpeg'],price:'213.15',stock:100,status:'published',category:'独处愉悦',description:'世界擎天炮机遥控免提伸缩震动加温女用自慰器抽插性爱充电情趣，让每一刻都值得被认真对待。'},
+{id:'p050',name:'新款便携提包小炮机男女用全自动伸缩抽插加热震动阳具打桩机后庭(mx)',images:['images/p050.jpeg'],price:'220.71',stock:100,status:'published',category:'独处愉悦',description:'新款便携提包小炮机男女用全自动伸缩抽插加热震动阳具打桩机后庭，让每一刻都值得被认真对待。'},
+{id:'p051',name:'【谜姬】全自动伸缩女用震动av棒按摩自慰器成人情趣用品炮机性玩具(mx)',images:['images/p051.jpeg'],price:'162.62',stock:100,status:'published',category:'独处愉悦',description:'【谜姬】全自动伸缩女用震动av棒按摩自慰器成人情趣用品炮机性玩具，让每一刻都值得被认真对待。'},
+{id:'p052',name:'新款女用自慰器伸缩加温按摩震动棒仿真阳具情趣成人用品充电玩具(mx)',images:['images/p052.jpg'],price:'90.42',stock:100,status:'published',category:'独处愉悦',description:'新款女用自慰器伸缩加温按摩震动棒仿真阳具情趣成人用品充电玩具，让每一刻都值得被认真对待。'},
+{id:'p053',name:'可拆卸假阳具抱枕阳具玩偶性玩具自慰器隐蔽抱枕可躺(mx)',images:['images/p053.jpeg'],price:'248.81',stock:100,status:'published',category:'独处愉悦',description:'可拆卸假阳具抱枕阳具玩偶性玩具自慰器隐蔽抱枕可躺，让每一刻都值得被认真对待。'},
+{id:'p054',name:'房事女性机器人女用自撸器夹腿自慰器老公阴茎gay阳具情趣用品(mx)',images:['images/p054.jpeg'],price:'375.45',stock:100,status:'published',category:'伴侣亲密',description:'房事女性机器人女用自撸器夹腿自慰器老公阴茎gay阳具情趣用品，让每一刻都值得被认真对待。'},
+{id:'p055',name:'撸皮撸蛋仿真阳具假阴茎超软双层自卫器女用肉感超大粗成人用品(mx)',images:['images/p055.jpeg'],price:'118.8',stock:100,status:'published',category:'独处愉悦',description:'撸皮撸蛋仿真阳具假阴茎超软双层自卫器女用肉感超大粗成人用品，让每一刻都值得被认真对待。'},
+{id:'p056',name:'AV双头电击点潮笔女用G点震动棒微电流刺激蜜豆女用成人情趣用品(mx)',images:['images/p056.jpeg'],price:'198.47',stock:100,status:'published',category:'独处愉悦',description:'AV双头电击点潮笔女用G点震动棒微电流刺激蜜豆女用成人情趣用品，让每一刻都值得被认真对待。'},
+{id:'p057',name:'新款女士成人全自动震动棒入体式成人用品按摩调情房事情趣工具(mx)',images:['images/p057.jpeg'],price:'39.67',stock:100,status:'published',category:'伴侣亲密',description:'新款女士成人全自动震动棒入体式成人用品按摩调情房事情趣工具，让每一刻都值得被认真对待。'},
+{id:'p058',name:'女用新款仿真阳具加温电动伸缩震动全自动情趣成人性用品无线遥控(mx)',images:['images/p058.jpeg'],price:'134.4',stock:100,status:'published',category:'独处愉悦',description:'女用新款仿真阳具加温电动伸缩震动全自动情趣成人性用品无线遥控，让每一刻都值得被认真对待。'},
+{id:'p059',name:'全自动新款仿真自慰器电动阳具伸缩加温震动成人女用性用品情趣(mx)',images:['images/p059.jpeg'],price:'120.34',stock:100,status:'published',category:'独处愉悦',description:'全自动新款仿真自慰器电动阳具伸缩加温震动成人女用性用品情趣，让每一刻都值得被认真对待。'},
+{id:'p060',name:'穿戴式空心假阳具男女专用仿真阳具超软假阴茎裤夫妻调情趣性用品(mx)',images:['images/p060.jpeg'],price:'119.28',stock:100,status:'published',category:'伴侣亲密',description:'穿戴式空心假阳具男女专用仿真阳具超软假阴茎裤夫妻调情趣性用品，让每一刻都值得被认真对待。'},
+{id:'p061',name:'仿真阳具自慰器伸缩加温性感大头超软专用阳具女用自撸器夹腿(mx)',images:['images/p061.jpeg'],price:'116.52',stock:100,status:'published',category:'独处愉悦',description:'仿真阳具自慰器伸缩加温性感大头超软专用阳具女用自撸器夹腿，让每一刻都值得被认真对待。'},
+{id:'p062',name:'男用仿真硅胶假阴茎情趣内裤自动加热震动双插玩法穿戴式(mx)',images:['images/p062.jpeg'],price:'108.3',stock:100,status:'published',category:'男悦时光',description:'男用仿真硅胶假阴茎情趣内裤自动加热震动双插玩法穿戴式，让每一刻都值得被认真对待。'},
+{id:'p063',name:'无线遥控电动狼牙套蘑菇头硅胶狼牙套阳具套情侣用品情趣用品(mx)',images:['images/p063.jpeg'],price:'109.64',stock:100,status:'published',category:'伴侣亲密',description:'无线遥控电动狼牙套蘑菇头硅胶狼牙套阳具套情侣用品情趣用品，让每一刻都值得被认真对待。'},
+{id:'p064',name:'阳具抱枕成人情趣性女用品假自慰器充气娃娃骑乘玩具可插阴茎坐骑(mx)',images:['images/p064.jpeg'],price:'431.75',stock:100,status:'published',category:'独处愉悦',description:'阳具抱枕成人情趣性女用品假自慰器充气娃娃骑乘玩具可插阴茎坐骑，让每一刻都值得被认真对待。'},
+{id:'p065',name:'撸撸棒全自动震动棒G点刺激私处情侣强力插入式(mx)',images:['images/p065.jpeg'],price:'132.06',stock:100,status:'published',category:'伴侣亲密',description:'撸撸棒全自动震动棒G点刺激私处情侣强力插入式，让每一刻都值得被认真对待。'},
+{id:'p066',name:'震动用品玩具女用刺激自慰器自慰成人炮机抽插阴蒂av私密性玩具(mx)',images:['images/p066.jpeg'],price:'124.44',stock:100,status:'published',category:'独处愉悦',description:'震动用品玩具女用刺激自慰器自慰成人炮机抽插阴蒂av私密性玩具，让每一刻都值得被认真对待。'},
+{id:'p067',name:'【谜姬】全自动伸缩转珠震动棒自慰器加温成人玩具女性情趣按摩棒低音(mx)',images:['images/p067.jpeg'],price:'152.81',stock:100,status:'published',category:'独处愉悦',description:'【谜姬】全自动伸缩转珠震动棒自慰器加温成人玩具女性情趣按摩棒低音，让每一刻都值得被认真对待。'},
+{id:'p068',name:'全自动伸缩成人仿真阳具女性阴茎专用自慰情趣神器情趣用品玩具(mx)',images:['images/p068.jpeg'],price:'111.09',stock:100,status:'published',category:'独处愉悦',description:'全自动伸缩成人仿真阳具女性阴茎专用自慰情趣神器情趣用品玩具，让每一刻都值得被认真对待。'},
+{id:'p069',name:'情趣女用品阳具玩偶性玩具自慰器女性坐骑成人炮机娃娃可拆卸新款(mx)',images:['images/p069.jpeg'],price:'270.54',stock:100,status:'published',category:'独处愉悦',description:'情趣女用品阳具玩偶性玩具自慰器女性坐骑成人炮机娃娃可拆卸新款，让每一刻都值得被认真对待。'},
+{id:'p070',name:'女用仿真阳具入珠无蛋龟头自慰器硅胶阴茎性用品后庭成人玩具情趣(mx)',images:['images/p070.jpeg'],price:'137.64',stock:100,status:'published',category:'独处愉悦',description:'女用仿真阳具入珠无蛋龟头自慰器硅胶阴茎性用品后庭成人玩具情趣，让每一刻都值得被认真对待。'},
+{id:'p071',name:'男用仿真空心阳具硅胶阴茎狼牙套安全套成人情趣性用品(mx)',images:['images/p071.jpeg'],price:'24.7',stock:100,status:'published',category:'男悦时光',description:'男用仿真空心阳具硅胶阴茎狼牙套安全套成人情趣性用品，让每一刻都值得被认真对待。'},
+{id:'p072',name:'自动伸缩炮机女用自慰器自动抽插震动棒振动阳具成人情趣性用品女(mx)',images:['images/p072.jpeg'],price:'157.84',stock:100,status:'published',category:'独处愉悦',description:'自动伸缩炮机女用自慰器自动抽插震动棒振动阳具成人情趣性用品女，让每一刻都值得被认真对待。'},
+{id:'p073',name:'成人用品硅胶女用自慰器具舌舔G点按摩震动加热女性情趣用品(mx)',images:['images/p073.jpeg'],price:'93.28',stock:100,status:'published',category:'独处愉悦',description:'成人用品硅胶女用自慰器具舌舔G点按摩震动加热女性情趣用品，让每一刻都值得被认真对待。'},
+{id:'p074',name:'充电加温女用自慰器震动棒自动玩具仿真阳具成人夫妻房事情趣工具(mx)',images:['images/p074.jpeg'],price:'106.09',stock:100,status:'published',category:'伴侣亲密',description:'充电加温女用自慰器震动棒自动玩具仿真阳具成人夫妻房事情趣工具，让每一刻都值得被认真对待。'},
+{id:'p075',name:'女用全自动仿真加温阳具无线遥控伸缩震动电动情趣成人性用品女(mx)',images:['images/p075.jpeg'],price:'163.2',stock:100,status:'published',category:'独处愉悦',description:'女用全自动仿真加温阳具无线遥控伸缩震动电动情趣成人性用品女，让每一刻都值得被认真对待。'},
+{id:'p076',name:'超爽新款保护私处护理玩具女用入体私处女款成年人护理情侣道具(mx)',images:['images/p076.jpeg'],price:'105.21',stock:100,status:'published',category:'私密护理',description:'超爽新款保护私处护理玩具女用入体私处女款成年人护理情侣道具，让每一刻都值得被认真对待。'},
+{id:'p077',name:'【谜姬】震动全自动女用伸缩拍打静音女性自慰器情趣成人情趣用品玩具(mx)',images:['images/p077.jpeg'],price:'199.2',stock:100,status:'published',category:'独处愉悦',description:'【谜姬】震动全自动女用伸缩拍打静音女性自慰器情趣成人情趣用品玩具，让每一刻都值得被认真对待。'},
+{id:'p078',name:'仿真阳具女用自慰器情趣性用品外出穿戴假阳具强力伸缩加温震动棒(mx)',images:['images/p078.jpeg'],price:'99.8',stock:100,status:'published',category:'独处愉悦',description:'仿真阳具女用自慰器情趣性用品外出穿戴假阳具强力伸缩加温震动棒，让每一刻都值得被认真对待。'},
+{id:'p079',name:'超软女用手动阴茎仿真硅胶柔软阳具自慰器成人情趣性用品解压玩具(mx)',images:['images/p079.jpeg'],price:'108.02',stock:100,status:'published',category:'独处愉悦',description:'超软女用手动阴茎仿真硅胶柔软阳具自慰器成人情趣性用品解压玩具，让每一刻都值得被认真对待。'},
+{id:'p080',name:'谜姬伸缩炮机女性震动全自动成人玩具加温情趣女用性用品自慰器(mx)',images:['images/p080.jpeg'],price:'185.59',stock:100,status:'published',category:'独处愉悦',description:'谜姬伸缩炮机女性震动全自动成人玩具加温情趣女用性用品自慰器，让每一刻都值得被认真对待。'},
+{id:'p081',name:'成人夫妻情趣性用品穿戴男用假阴茎套仿真阳具硅胶套大空心套子(mx)',images:['images/p081.jpeg'],price:'66.28',stock:100,status:'published',category:'伴侣亲密',description:'成人夫妻情趣性用品穿戴男用假阴茎套仿真阳具硅胶套大空心套子，让每一刻都值得被认真对待。'},
+{id:'p082',name:'姬欲全自动加温女用震动棒夫妻性自慰器伸缩舌舔玩具成人情趣用品(mx)',images:['images/p082.jpg'],price:'113.76',stock:100,status:'published',category:'伴侣亲密',description:'姬欲全自动加温女用震动棒夫妻性自慰器伸缩舌舔玩具成人情趣用品，让每一刻都值得被认真对待。'},
+{id:'p083',name:'男女用双头龙假阳具仿真阴茎自慰器情趣成人玩具用品女性自卫一体(mx)',images:['images/p083.jpeg'],price:'355.63',stock:100,status:'published',category:'伴侣亲密',description:'男女用双头龙假阳具仿真阴茎自慰器情趣成人玩具用品女性自卫一体，让每一刻都值得被认真对待。'},
+{id:'p084',name:'莱斯帕蒂女用充电震动棒迷你可爱按摩棒跳蛋宿舍静音成人情趣用品(mx)',images:['images/p084.jpeg'],price:'84.61',stock:100,status:'published',category:'独处愉悦',description:'莱斯帕蒂女用充电震动棒迷你可爱按摩棒跳蛋宿舍静音成人情趣用品，让每一刻都值得被认真对待。'},
+{id:'p085',name:'双头震动充电自慰便携AV女用情趣性用品按摩棒器具成人情趣用品(mx)',images:['images/p085.jpeg'],price:'87.3',stock:100,status:'published',category:'独处愉悦',description:'双头震动充电自慰便携AV女用情趣性用品按摩棒器具成人情趣用品，让每一刻都值得被认真对待。'},
+{id:'p086',name:'全自动充电伸缩震动棒女性用自慰器仿真阳具夫妻成人情趣性用品(mx)',images:['images/p086.jpeg'],price:'59.07',stock:100,status:'published',category:'伴侣亲密',description:'全自动充电伸缩震动棒女性用自慰器仿真阳具夫妻成人情趣性用品，让每一刻都值得被认真对待。'},
+{id:'p087',name:'丽波天蝎座充电女用震动棒女性自卫器成人情趣性用品情趣震动棒(mx)',images:['images/p087.jpeg'],price:'109.64',stock:100,status:'published',category:'独处愉悦',description:'丽波天蝎座充电女用震动棒女性自卫器成人情趣性用品情趣震动棒，让每一刻都值得被认真对待。'},
+{id:'p088',name:'男女用les穿戴阳具加温鸡把t拉拉内裤假阴茎同性恋性工具情趣用品(mx)',images:['images/p088.jpeg'],price:'134.31',stock:100,status:'published',category:'伴侣亲密',description:'男女用les穿戴阳具加温鸡把t拉拉内裤假阴茎同性恋性工具情趣用品，让每一刻都值得被认真对待。'},
+{id:'p089',name:'男用空心阳具电动无线遥控加长硅胶阴茎狼牙套震动情趣情趣用品(mx)',images:['images/p089.jpeg'],price:'99.11',stock:100,status:'published',category:'男悦时光',description:'男用空心阳具电动无线遥控加长硅胶阴茎狼牙套震动情趣情趣用品，让每一刻都值得被认真对待。'},
+{id:'p090',name:'延时喷剂男用男士延时喷剂(mx)',images:['images/p090.jpg'],price:'181.86',stock:100,status:'published',category:'男悦时光',description:'延时喷剂男用男士延时喷剂，让每一刻都值得被认真对待。'},
+{id:'p091',name:'前列腺男用自动抽插炮机伪娘按摩伸缩肛塞gay高潮情趣用品插屁股(mx)',images:['images/p091.jpeg'],price:'71.99',stock:100,status:'published',category:'私密护理',description:'前列腺男用自动抽插炮机伪娘按摩伸缩肛塞gay高潮情趣用品插屁股，让每一刻都值得被认真对待。'},
+{id:'p092',name:'【谜姬】萌喵外出穿戴控制远程遥控女用自慰器性用品成人情趣异地玩具(mx)',images:['images/p092.jpeg'],price:'64.73',stock:100,status:'published',category:'私密护理',description:'【谜姬】萌喵外出穿戴控制远程遥控女用自慰器性用品成人情趣异地玩具，让每一刻都值得被认真对待。'},
+{id:'p093',name:'无线遥控电动狼牙套加长硅胶阴茎套震动空心套柔软阳具套情趣用品(mx)',images:['images/p093.jpeg'],price:'73.77',stock:100,status:'published',category:'伴侣亲密',description:'无线遥控电动狼牙套加长硅胶阴茎套震动空心套柔软阳具套情趣用品，让每一刻都值得被认真对待。'},
+{id:'p094',name:'成人夫妻情趣性用品穿戴男用假阴茎套仿真阳具硅胶套大空心套子(mx)',images:['images/p094.jpeg'],price:'66.29',stock:100,status:'published',category:'伴侣亲密',description:'成人夫妻情趣性用品穿戴男用假阴茎套仿真阳具硅胶套大空心套子，让每一刻都值得被认真对待。'},
+{id:'p095',name:'双头震动高潮棒女性情趣用品速热增强激情拉拉同性阳具仿真女同(mx)',images:['images/p095.jpeg'],price:'95.49',stock:100,status:'published',category:'伴侣亲密',description:'双头震动高潮棒女性情趣用品速热增强激情拉拉同性阳具仿真女同，让每一刻都值得被认真对待。'},
+{id:'p096',name:'女用假阳具按摩棒自慰器兔子G点震动棒女性情趣成人性用品代批发(mx)',images:['images/p096.jpg'],price:'83.97',stock:100,status:'published',category:'独处愉悦',description:'女用假阳具按摩棒自慰器兔子G点震动棒女性情趣成人性用品代批发，让每一刻都值得被认真对待。'},
+{id:'p097',name:'新款双头龙震动棒女用拉拉自慰器内置加热穿戴阳具成人情趣用品(mx)',images:['images/p097.jpeg'],price:'270.20',stock:100,status:'published',category:'伴侣亲密',description:'新款双头龙震动棒女用拉拉自慰器内置加热穿戴阳具成人情趣用品，让每一刻都值得被认真对待。'},
+{id:'p098',name:'充电加温女用自慰器震动棒自动玩具仿真阳具成人夫妻房事情趣工具(mx)',images:['images/p098.jpeg'],price:'106.10',stock:100,status:'published',category:'私密护理',description:'充电加温女用自慰器震动棒自动玩具仿真阳具成人夫妻房事情趣工具，让每一刻都值得被认真对待。'},
+{id:'p099',name:'新款双震成人高仿真阳具无线遥控伸缩加热超软自慰器夫妻情性用品(mx)',images:['images/p099.jpeg'],price:'77.90',stock:100,status:'published',category:'独处愉悦',description:'新款双震成人高仿真阳具无线遥控伸缩加热超软自慰器夫妻情性用品，让每一刻都值得被认真对待。'},
+{id:'p100',name:'阳具自动伸缩抽插女用成人仿真电动自慰器加热宿舍静音遥控炮机(mx)',images:['images/p100.jpeg'],price:'263.48',stock:100,status:'published',category:'独处愉悦',description:'阳具自动伸缩抽插女用成人仿真电动自慰器加热宿舍静音遥控炮机，让每一刻都值得被认真对待。'},
+{id:'p101',name:'真牛皮sm捆绑束缚套装情趣道具女用品调教女朋友双人互动手铐成人(mx)',images:['images/p101.jpeg'],price:'296.31',stock:100,status:'published',category:'仪式氛围',description:'真牛皮sm捆绑束缚套装情趣道具女用品调教女朋友双人互动手铐成人，让每一刻都值得被认真对待。'},
+{id:'p102',name:'GALAKU正品全自动仿真阳具自慰器女用大功率情侣房事调情趣性玩具(mx)',images:['images/p102.jpeg'],price:'75.77',stock:100,status:'published',category:'独处愉悦',description:'GALAKU正品全自动仿真阳具自慰器女用大功率情侣房事调情趣性玩具，让每一刻都值得被认真对待。'},
+{id:'p103',name:'新款女性用成人高仿真阳具自动伸缩遥控震动加热超软自慰器性用品(mx)',images:['images/p103.jpeg'],price:'157.61',stock:100,status:'published',category:'独处愉悦',description:'新款女性用成人高仿真阳具自动伸缩遥控震动加热超软自慰器性用品，让每一刻都值得被认真对待。'},
+{id:'p104',name:'情趣女用品阳具玩偶性玩具自慰器女性坐骑成人炮机娃娃可拆卸新款(mx)',images:['images/p104.jpeg'],price:'270.54',stock:100,status:'published',category:'独处愉悦',description:'情趣女用品阳具玩偶性玩具自慰器女性坐骑成人炮机娃娃可拆卸新款，让每一刻都值得被认真对待。'},
+{id:'p105',name:'震动用品玩具女用刺激自慰器自慰成人炮机抽插阴蒂av私密性玩具(mx)',images:['images/p105.jpeg'],price:'124.44',stock:100,status:'published',category:'独处愉悦',description:'震动用品玩具女用刺激自慰器自慰成人炮机抽插阴蒂av私密性玩具，让每一刻都值得被认真对待。'},
+{id:'p106',name:'全自动女用充电加温震动棒仿真体缩阳具遥控自慰器成人情趣性用品(mx)',images:['images/p106.jpg'],price:'118.32',stock:100,status:'published',category:'独处愉悦',description:'全自动女用充电加温震动棒仿真体缩阳具遥控自慰器成人情趣性用品，让每一刻都值得被认真对待。'},
+{id:'p107',name:'飞机杯倒模男用gay同志自慰器屁股肛门可插入仿真阳具女自慰用品(mx)',images:['images/p107.jpeg'],price:'311.15',stock:100,status:'published',category:'男悦时光',description:'飞机杯倒模男用gay同志自慰器屁股肛门可插入仿真阳具女自慰用品，让每一刻都值得被认真对待。'},
+{id:'p108',name:'sm道具重度另类手铐捆绑束缚枷夫妻调情刑具调教室悬吊惩罚金属杆(mx)',images:['images/p108.jpeg'],price:'339.75',stock:100,status:'published',category:'仪式氛围',description:'sm道具重度另类手铐捆绑束缚枷夫妻调情刑具调教室悬吊惩罚金属杆，让每一刻都值得被认真对待。'},
+{id:'p109',name:'莱斯帕蒂震动棒女用按摩棒强力震动变频静音大头AV棒成人情趣用品(mx)',images:['images/p109.jpg'],price:'99.94',stock:100,status:'published',category:'独处愉悦',description:'莱斯帕蒂震动棒女用按摩棒强力震动变频静音大头AV棒成人情趣用品，认真了解自己，也认真爱自己。'},
+{id:'p110',name:'震动棒自慰棒仿真大号女性情趣成人用品强震大头柔软G点解压神器(mx)',images:['images/p110.jpg'],price:'96.75',stock:100,status:'published',category:'独处愉悦',description:'震动棒自慰棒仿真大号女性情趣成人用品强震大头柔软G点解压神器，认真了解自己，也认真爱自己。'},
+{id:'p111',name:'点潮女用品震动女用按摩自慰器性玩具强震点高潮女性成人情趣神器(mx)',images:['images/p111.jpg'],price:'73.52',stock:100,status:'published',category:'独处愉悦',description:'点潮女用品震动女用按摩自慰器性玩具强震点高潮女性成人情趣神器，认真了解自己，也认真爱自己。'},
+{id:'p112',name:'姬欲全自动伸缩炮机女用震动棒强震情趣用品自慰器成人玩具按摩av(mx)',images:['images/p112.jpg'],price:'178.8',stock:100,status:'published',category:'独处愉悦',description:'姬欲全自动伸缩炮机女用震动棒强震情趣用品自慰器成人玩具按摩av，认真了解自己，也认真爱自己。'},
+{id:'p113',name:'全自动充电震动玩具加温女用自慰器仿真阳具伸缩成人情趣夫妻(mx)',images:['images/p113.jpg'],price:'78.75',stock:100,status:'published',category:'伴侣亲密',description:'全自动充电震动玩具加温女用自慰器仿真阳具伸缩成人情趣夫妻，认真了解自己，也认真爱自己。'},
+{id:'p114',name:'全自动电动仿真阳具加温伸缩女用震动成人自慰器情趣性用品玩具(mx)',images:['images/p114.jpg'],price:'87.15',stock:100,status:'published',category:'独处愉悦',description:'全自动电动仿真阳具加温伸缩女用震动成人自慰器情趣性用品玩具，认真了解自己，也认真爱自己。'},
+{id:'p115',name:'姬欲新款女用上位阳具伸缩坐骑炮机玩具情趣用品自慰器坐式震动棒(mx)',images:['images/p115.jpg'],price:'125.77',stock:100,status:'published',category:'独处愉悦',description:'姬欲新款女用上位阳具伸缩坐骑炮机玩具情趣用品自慰器坐式震动棒，认真了解自己，也认真爱自己。'},
+{id:'p116',name:'全自动男女炮机阳具APP自慰器打桩机女用后庭异地遥控(mx)',images:['images/p116.jpg'],price:'177.3',stock:100,status:'published',category:'独处愉悦',description:'全自动男女炮机阳具APP自慰器打桩机女用后庭异地遥控，认真了解自己，也认真爱自己。'},
+{id:'p117',name:'Orgie奥姬延时喷剂男用品持久延迟喷雾正品延长延时喷剂成人情趣(mx)',images:['images/p117.jpg'],price:'142.08',stock:100,status:'published',category:'男悦时光',description:'Orgie奥姬延时喷剂男用品持久延迟喷雾正品延长延时喷剂成人情趣，认真了解自己，也认真爱自己。'},
+{id:'p118',name:'女用自慰5.3kg肌肉男模仿真阳具可拆卸假阴茎半身实体女自慰娃娃(mx)',images:['images/p118.png'],price:'493.11',stock:100,status:'published',category:'男悦时光',description:'女用自慰5.3kg肌肉男模仿真阳具可拆卸假阴茎半身实体女自慰娃娃，认真了解自己，也认真爱自己。'},
+{id:'p119',name:'震动自慰器男用av震动棒自动性用品情趣sm自慰器按摩棒成人用品(mx)',images:['images/p119.png'],price:'86.1',stock:100,status:'published',category:'男悦时光',description:'震动自慰器男用av震动棒自动性用品情趣sm自慰器按摩棒成人用品，认真了解自己，也认真爱自己。'},
+{id:'p120',name:'AAV新款女士震动棒高级潮款入体高频撩逗加热女用自慰器成人用品(mx)',images:['images/p120.jpg'],price:'185.46',stock:100,status:'published',category:'独处愉悦',description:'AAV新款女士震动棒高级潮款入体高频撩逗加热女用自慰器成人用品，认真了解自己，也认真爱自己。'},
+{id:'p121',name:'女士成人快乐玩具 仿真电动摇摆震动棒 自慰器情趣用品 私密发货(mx)',images:['images/p121.jpg'],price:'218.31',stock:100,status:'published',category:'独处愉悦',description:'女士成人快乐玩具 仿真电动摇摆震动棒 自慰器情趣用品 私密发货，认真了解自己，也认真爱自己。'},
+{id:'p122',name:'震动超爽全自动私处女用护理小巧迷你神器情侣按摩棒av性玩具(mx)',images:['images/p122.jpg'],price:'122.97',stock:100,status:'published',category:'私密护理',description:'震动超爽全自动私处女用护理小巧迷你神器情侣按摩棒av性玩具，认真了解自己，也认真爱自己。'},
+{id:'p123',name:'成人夫妻情趣性用品穿戴男用假阴茎异形阳具硅胶套加大加厚空心套(mx)',images:['images/p123.jpg'],price:'64.36',stock:100,status:'published',category:'男悦时光',description:'成人夫妻情趣性用品穿戴男用假阴茎异形阳具硅胶套加大加厚空心套，认真了解自己，也认真爱自己。'},
+{id:'p124',name:'仙女震动棒正品超软变形女性用品情趣发泄工具双震硅胶成人用品(mx)',images:['images/p124.jpg'],price:'197.24',stock:100,status:'published',category:'独处愉悦',description:'仙女震动棒正品超软变形女性用品情趣发泄工具双震硅胶成人用品，认真了解自己，也认真爱自己。'},
+{id:'p125',name:'情趣公仔抱枕女用炮机震动棒闺蜜送礼毛绒玩具成人性用品静音(mx)',images:['images/p125.jpg'],price:'303.3',stock:100,status:'published',category:'仪式氛围',description:'情趣公仔抱枕女用炮机震动棒闺蜜送礼毛绒玩具成人性用品静音，认真了解自己，也认真爱自己。'},
+{id:'p126',name:'谜姬智控樱花乳夹震动电击乳房按摩前戏挑逗调情女用自慰器SM道具(mx)',images:['images/p126.jpg'],price:'124.95',stock:100,status:'published',category:'仪式氛围',description:'谜姬智控樱花乳夹震动电击乳房按摩前戏挑逗调情女用自慰器SM道具，认真了解自己，也认真爱自己。'},
+{id:'p127',name:'房事女性机器女用自撸器夹腿自慰器老公阴茎gay阳具情趣用品(mx)',images:['images/p127.jpg'],price:'375.45',stock:100,status:'published',category:'男悦时光',description:'房事女性机器女用自撸器夹腿自慰器老公阴茎gay阳具情趣用品，认真了解自己，也认真爱自己。'},
+{id:'p128',name:'新款女士成全自动震动棒入体式成用品按摩调情房事情趣工具(mx)',images:['images/p128.jpg'],price:'39.67',stock:100,status:'published',category:'独处愉悦',description:'新款女士成全自动震动棒入体式成用品按摩调情房事情趣工具，认真了解自己，也认真爱自己。'},
+{id:'p129',name:'爱世界威霸炮机电动遥控震动伸缩加温免提自慰伸缩炮机全自动可躺(mx)',images:['images/p129_1.jpg'],price:'219.7',stock:100,status:'published',category:'独处愉悦',description:'全自动可躺设计，电动遥控震动伸缩加温免提。品质保障，私密发货。'},
+{id:'p130',name:'插电女用炮机全自动抽插伸缩震动电动加温仿真阳具男女自慰器后庭(mx)',images:['images/p130_1.jpg'],price:'105',stock:100,status:'published',category:'独处愉悦',description:'插电式设计，全自动抽插伸缩震动，仿真阳具电动加温。品质保障，私密发货。'},
+{id:'p131',name:'全自动震动棒女用电动自慰器阳具加温成人情趣仿真夫妻性用品玩具(mx)',images:['images/p131_1.jpg'],price:'113.1',stock:100,status:'published',category:'独处愉悦',description:'全自动震动设计，女用电动自慰器，仿真阳具加温。品质保障，私密发货。'},
+{id:'p132',name:'女上位阳具坐骑玩具成人情趣性女用品骑乘炮机自慰器男坐式震动棒(mx)',images:['images/p132_1.jpg'],price:'217.6',stock:100,status:'published',category:'独处愉悦',description:'女上位坐骑设计，成人情趣用品，骑乘炮机自慰器。品质保障，私密发货。'},
+{id:'p133',name:'成人性玩具男女夫妻共用男士穿戴假阳具双人双插两性喷水阴茎情趣(mx)',images:['images/p132_1.jpg'],price:'75.3',stock:100,status:'published',category:'伴侣亲密',description:'男女夫妻共用设计，男士穿戴假阳具，双人双插玩法。品质保障，私密发货。'},
+{id:'p134',name:'假成人充气娃娃自慰器坐骑性玩具女用品玩偶情趣抱枕女性炮机阳具(mx)',images:['images/p132_1.jpg'],price:'245.4',stock:100,status:'published',category:'独处愉悦',description:'仿真充气娃娃设计，坐骑性玩具，女用自慰器玩偶抱枕。品质保障，私密发货。'}
 ];
-var SS={customer_service_qr:'',contact_wechat:'jiujiu_service'};
-
-/* ===== Store ===== */
-var Store={
-  getProducts:function(){try{var stored=localStorage.getItem('jj_products');return stored&&stored!=='[]'?JSON.parse(stored):SP}catch(e){return SP}},
-  getSettings:function(){try{var stored=localStorage.getItem('jj_settings');return stored?JSON.parse(stored):SS}catch(e){return SS}},
-  init:function(){
-    // 清除旧缓存，强制刷新商品数据
-    localStorage.removeItem('jj_products');
-    localStorage.removeItem('jj_settings');
-    localStorage.removeItem('jj_init_v17');
-    // 写入最新商品数据
-    localStorage.setItem('jj_products',JSON.stringify(SP));
-    localStorage.setItem('jj_settings',JSON.stringify(SS));
-    localStorage.setItem('jj_init_v18','1');
-  }
-};
-
-/* ===== State ===== */
-var curCat='all',curProduct=null,curImgIdx=0;
+var SS={customer_service_qr:'',contact_wechat:'jiujiu_service'};var Store={
+_cache:null,
+getProducts:function(){if(this._cache)return this._cache;try{var stored=localStorage.getItem('jj_products');var data=stored&&stored!=='[]'?JSON.parse(stored):SP;this._cache=data;return data}catch(e){return SP}},
+getSettings:function(){try{var stored=localStorage.getItem('jj_settings');return stored?JSON.parse(stored):SS}catch(e){return SS}},
+init:function(){
+// 清除旧缓存，强制刷新商品数据
+try{localStorage.removeItem('jj_products');localStorage.removeItem('jj_settings');localStorage.removeItem('jj_init_v17');}catch(e){}
+// 写入本地存储不阻塞首屏：使用空闲回调/异步写入
+try{
+this._cache=SP;
+var payload=JSON.stringify(SP);
+if(window.requestIdleCallback){
+window.requestIdleCallback(function(){try{localStorage.setItem('jj_products',payload);localStorage.setItem('jj_settings',JSON.stringify(SS));localStorage.setItem('jj_init_v18','1')}catch(e){}});
+}else{
+setTimeout(function(){try{localStorage.setItem('jj_products',payload);localStorage.setItem('jj_settings',JSON.stringify(SS));localStorage.setItem('jj_init_v18','1')}catch(e){}},200);
+}
+}catch(e){}
+}
+};var curCat='all',curProduct=null,curImgIdx=0;
 var CAT_ORDER=['独处愉悦','男悦时光','伴侣亲密','私密护理','仪式氛围'];
 var CAT_DESC={
-  '独处愉悦':'独处的时光，是与自己约会的时刻',
-  '男悦时光':'男人也值得被温柔以待',
-  '伴侣亲密':'每一次触碰，都是爱的告白',
-  '私密护理':'呵护身体的每一处细节',
-  '仪式氛围':'点燃蜡烛，让浪漫发生'
+'独处愉悦':'独处的时光，是与自己约会的时刻',
+'男悦时光':'男人也值得被温柔以待',
+'伴侣亲密':'每一次触碰，都是爱的告白',
+'私密护理':'呵护身体的每一处细节',
+'仪式氛围':'点燃蜡烛，让浪漫发生'
+};function grad(cat){
+var g={
+'独处愉悦':'linear-gradient(135deg,#9B7BA8,#6B5B8E)',
+'男悦时光':'linear-gradient(135deg,#6B7B95,#4A5A7A)',
+'伴侣亲密':'linear-gradient(135deg,#D4A5A5,#B08584)',
+'私密护理':'linear-gradient(135deg,#E8B886,#D4A574)',
+'仪式氛围':'linear-gradient(135deg,#C4836E,#A06850)'
 };
-
-/* ===== Helpers ===== */
-function grad(cat){
-  var g={
-    '独处愉悦':'linear-gradient(135deg,#9B7BA8,#6B5B8E)',
-    '男悦时光':'linear-gradient(135deg,#6B7B95,#4A5A7A)',
-    '伴侣亲密':'linear-gradient(135deg,#D4A5A5,#B08584)',
-    '私密护理':'linear-gradient(135deg,#E8B886,#D4A574)',
-    '仪式氛围':'linear-gradient(135deg,#C4836E,#A06850)'
-  };
-  return g[cat]||g['仪式氛围'];
+return g[cat]||g['仪式氛围'];
 }
-function esc(s){return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;')}
-
-/* ===== Render Category Sections ===== */
-function renderSections(){
-  var container=document.getElementById('catSections');
-  var empty=document.getElementById('empty');
-  var ps=Store.getProducts().filter(function(p){return p.status==='published'});
-  
-  if(curCat!=='all'){
-    ps=ps.filter(function(p){return p.category===curCat});
-    if(ps.length===0){container.innerHTML='';empty.style.display='block';return}
-    empty.style.display='none';
-    container.innerHTML=buildSectionHTML(curCat,ps,0);
-    return;
-  }
-  
-  empty.style.display='none';
-  var html='';
-  var delayOffset=0;
-  CAT_ORDER.forEach(function(cat){
-    var catPs=ps.filter(function(p){return p.category===cat});
-    if(catPs.length>0){
-      html+=buildSectionHTML(cat,catPs,delayOffset);
-      delayOffset+=4;
-    }
-  });
-  container.innerHTML=html;
+function esc(s){return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;')}function renderSections(){
+var container=document.getElementById('catSections');
+var empty=document.getElementById('empty');
+var ps=Store.getProducts().filter(function(p){return p.status==='published'});
+if(curCat!=='all'){
+ps=ps.filter(function(p){return p.category===curCat});
+if(ps.length===0){container.innerHTML='';empty.style.display='block';return}
+empty.style.display='none';
+container.innerHTML=buildSectionHTML(curCat,ps,0);
+return;
 }
-
-function shuffle(arr){
-  var a=arr.slice();
-  for(var i=a.length-1;i>0;i--){
-    var j=Math.floor(Math.random()*(i+1));
-    var t=a[i];a[i]=a[j];a[j]=t;
-  }
-  return a;
+empty.style.display='none';
+var html='';
+var delayOffset=0;
+CAT_ORDER.forEach(function(cat){
+var catPs=ps.filter(function(p){return p.category===cat});
+if(catPs.length>0){
+html+=buildSectionHTML(cat,catPs,delayOffset);
+delayOffset+=4;
 }
-
-function buildCard(p,startDelay){
-  var hasImg=p.images&&p.images.length>0;
-  var imgHTML=hasImg?'<img src="'+esc(p.images[0])+'" alt="'+esc(p.name)+'" loading="lazy">'
-    :'<div class="ph" style="background:'+grad(p.category)+'">'+esc(p.name)+'</div>';
-  return '<div class="p-card" style="animation-delay:'+(startDelay*0.08)+'s" onclick="openP(\''+p.id+'\')">'
-    +'<div class="p-card-img">'+imgHTML+'</div>'
-    +'<div class="p-card-info">'
-    +'<span class="p-card-cat">'+esc(p.category)+'</span>'
-    +'<div class="p-card-name">'+esc(p.name)+'</div>'
-    +'<div class="p-card-price">'+esc(p.price)+'</div></div></div>';
+});
+container.innerHTML=html;
+}function shuffle(arr){
+var a=arr.slice();
+for(var i=a.length-1;i>0;i--){
+var j=Math.floor(Math.random()*(i+1));
+var t=a[i];a[i]=a[j];a[j]=t;
 }
-
-function buildSectionHTML(cat,products,startDelay){
-  var shuffled=shuffle(products);
-  var showCount=Math.min(8,shuffled.length);
-  var shown=shuffled.slice(0,showCount);
-  var remaining=shuffled.slice(showCount);
-  var cards=shown.map(function(p,i){return buildCard(p,startDelay+i)}).join('');
-  var moreHTML='';
-  if(remaining.length>0){
-    moreHTML='<div class="btn-more-wrap" id="more-'+esc(cat)+'" data-remaining="'+esc(JSON.stringify(remaining))+'"><button class="btn-more" onclick="showMore(\''+esc(cat)+'\')">查看更多（还剩 '+remaining.length+' 件）</button></div>';
-  }else if(products.length>8){
-    moreHTML='<div class="btn-more-wrap"><button class="btn-more all-shown" disabled>已展示全部 '+products.length+' 件商品</button></div>';
-  }
-  return '<section class="cat-section" data-cat="'+esc(cat)+'">'
-    +'<div class="cat-section-head"><h3>'+esc(cat)+'</h3><p>'+esc(CAT_DESC[cat]||'')+'</p></div>'
-    +'<div class="cat-grid-bg"><div class="cat-grid" id="grid-'+esc(cat)+'">'+cards+'</div>'+moreHTML+'</div>'
-    +'</section>';
+return a;
+}function buildCard(p,startDelay){
+var hasImg=p.images&&p.images.length>0;
+var imgHTML=hasImg?'<img src="'+esc(p.images[0])+'" alt="'+esc(p.name)+'" loading="lazy" decoding="async">'
+:'<div class="ph" style="background:'+grad(p.category)+'">'+esc(p.name)+'</div>';
+return '<div class="p-card" style="animation-delay:'+(startDelay*0.08)+'s" onclick="openP(\''+p.id+'\')">'
++'<div class="p-card-img">'+imgHTML+'</div>'
++'<div class="p-card-info">'
++'<span class="p-card-cat">'+esc(p.category)+'</span>'
++'<div class="p-card-name">'+esc(p.name)+'</div>'
++'<div class="p-card-price">'+esc(p.price)+'</div></div></div>';
+}function buildSectionHTML(cat,products,startDelay){
+var shuffled=shuffle(products);
+var showCount=Math.min(8,shuffled.length);
+var shown=shuffled.slice(0,showCount);
+var remaining=shuffled.slice(showCount);
+var cards=shown.map(function(p,i){return buildCard(p,startDelay+i)}).join('');
+var moreHTML='';
+if(remaining.length>0){
+moreHTML='<div class="btn-more-wrap" id="more-'+esc(cat)+'" data-remain-ids="'+esc(JSON.stringify(remaining.map(function(p){return p.id})))+'"><button class="btn-more" onclick="showMore(\''+esc(cat)+'\')">查看更多（还剩 '+remaining.length+' 件）</button></div>';
+}else if(products.length>8){
+moreHTML='<div class="btn-more-wrap"><button class="btn-more all-shown" disabled>已展示全部 '+products.length+' 件商品</button></div>';
 }
-
-function showMore(cat){
-  var wrap=document.getElementById('more-'+cat);
-  if(!wrap)return;
-  var data=wrap.getAttribute('data-remaining');
-  var remaining=JSON.parse(data);
-  var grid=document.getElementById('grid-'+cat);
-  var existing=grid.querySelectorAll('.p-card').length;
-  var next=remaining.splice(0,8);
-  wrap.setAttribute('data-remaining',JSON.stringify(remaining));
-  next.forEach(function(p,i){
-    var div=document.createElement('div');
-    div.innerHTML=buildCard(p,existing+i);
-    grid.appendChild(div.firstElementChild);
-  });
-  if(remaining.length>0){
-    wrap.querySelector('button').textContent='查看更多（还剩 '+remaining.length+' 件）';
-  }else{
-    wrap.innerHTML='<button class="btn-more all-shown" disabled>已展示全部</button>';
-  }
+return '<section class="cat-section" data-cat="'+esc(cat)+'">'
++'<div class="cat-section-head"><h3>'+esc(cat)+'</h3><p>'+esc(CAT_DESC[cat]||'')+'</p></div>'
++'<div class="cat-grid-bg"><div class="cat-grid" id="grid-'+esc(cat)+'">'+cards+'</div>'+moreHTML+'</div>'
++'</section>';
+}function showMore(cat){
+var wrap=document.getElementById('more-'+cat);
+if(!wrap)return;
+var ids=JSON.parse(wrap.getAttribute('data-remain-ids'));
+var all=Store.getProducts();
+var idMap={};
+for(var k=0;k<all.length;k++){idMap[all[k].id]=all[k]}
+var grid=document.getElementById('grid-'+cat);
+var existing=grid.querySelectorAll('.p-card').length;
+var nextIds=ids.splice(0,8);
+wrap.setAttribute('data-remain-ids',JSON.stringify(ids));
+nextIds.forEach(function(pid,i){
+var p=idMap[pid];if(!p)return;
+var div=document.createElement('div');
+div.innerHTML=buildCard(p,existing+i);
+grid.appendChild(div.firstElementChild);
+});
+if(ids.length>0){
+wrap.querySelector('button').textContent='查看更多（还剩 '+ids.length+' 件）';
+}else{
+wrap.innerHTML='<button class="btn-more all-shown" disabled>已展示全部</button>';
 }
-
-/* ===== Product Detail ===== */
-function openP(id){
-  var ps=Store.getProducts();
-  for(var i=0;i<ps.length;i++){if(ps[i].id===id){curProduct=ps[i];break}}
-  if(!curProduct)return;
-  curImgIdx=0;
-  document.getElementById('dCat').textContent=curProduct.category;
-  document.getElementById('dName').textContent=curProduct.name;
-  document.getElementById('dPrice').textContent=curProduct.price;
-  document.getElementById('dDesc').textContent=curProduct.description;
-  var stockEl=document.getElementById('dStock');
-  if(curProduct.stock>0){
-    stockEl.innerHTML='<span class="in-stock">有货</span> | 库存 '+curProduct.stock+' 件';
-  }else{
-    stockEl.innerHTML='暂时缺货';
-  }
-  renderGallery();
-  document.getElementById('pModal').classList.add('active');
-  document.body.style.overflow='hidden';
+}function openP(id){
+var ps=Store.getProducts();
+for(var i=0;i<ps.length;i++){if(ps[i].id===id){curProduct=ps[i];break}}
+if(!curProduct)return;
+curImgIdx=0;
+document.getElementById('dCat').textContent=curProduct.category;
+document.getElementById('dName').textContent=curProduct.name;
+document.getElementById('dPrice').textContent=curProduct.price;
+document.getElementById('dDesc').textContent=curProduct.description;
+var stockEl=document.getElementById('dStock');
+if(curProduct.stock>0){
+stockEl.innerHTML='<span class="in-stock">有货</span> | 库存 '+curProduct.stock+' 件';
+}else{
+stockEl.innerHTML='暂时缺货';
+}
+renderGallery();
+document.getElementById('pModal').classList.add('active');
+document.body.style.overflow='hidden';
 }
 function renderGallery(){
-  var main=document.getElementById('gMain');
-  var thumbs=document.getElementById('gThumbs');
-  if(!curProduct.images||curProduct.images.length===0){
-    main.innerHTML='<div class="gallery-nav"><button onclick="changeImg(-1)" id="prevBtn" class="hidden">&#8249;</button><button onclick="changeImg(1)" id="nextBtn" class="hidden">&#8250;</button></div><div class="ph" style="background:'+grad(curProduct.category)+';width:100%;height:100%;display:flex;align-items:center;justify-content:center;font-family:Noto Serif SC,serif;font-size:26px;color:rgba(255,255,255,.85);font-weight:500">'+esc(curProduct.name)+'</div>';
-    thumbs.innerHTML='';
-    return;
-  }
-  var imgs=curProduct.images;
-  main.innerHTML='<div class="gallery-nav"><button onclick="changeImg(-1)" id="prevBtn" '+(curImgIdx===0?'class="hidden"':'')+'>&#8249;</button><button onclick="changeImg(1)" id="nextBtn" '+(curImgIdx===imgs.length-1?'class="hidden"':'')+'>&#8250;</button></div><img src="'+esc(imgs[curImgIdx])+'" alt="'+esc(curProduct.name)+'">';
-  if(imgs.length>1){
-    thumbs.innerHTML=imgs.map(function(img,i){
-      return '<div class="thumb'+(i===curImgIdx?' active':'')+'" onclick="setImg('+i+')"><img src="'+esc(img)+'" alt=""></div>';
-    }).join('');
-  }else{
-    thumbs.innerHTML='';
-  }
+var main=document.getElementById('gMain');
+var thumbs=document.getElementById('gThumbs');
+if(!curProduct.images||curProduct.images.length===0){
+main.innerHTML='<div class="gallery-nav"><button onclick="changeImg(-1)" id="prevBtn" class="hidden">&#8249;</button><button onclick="changeImg(1)" id="nextBtn" class="hidden">&#8250;</button></div><div class="ph" style="background:'+grad(curProduct.category)+';width:100%;height:100%;display:flex;align-items:center;justify-content:center;font-family:Noto Serif SC,STSong,SimSun,serif;font-size:26px;color:rgba(255,255,255,.85);font-weight:500">'+esc(curProduct.name)+'</div>';
+thumbs.innerHTML='';
+return;
+}
+var imgs=curProduct.images;
+main.innerHTML='<div class="gallery-nav"><button onclick="changeImg(-1)" id="prevBtn" '+(curImgIdx===0?'class="hidden"':'')+'>&#8249;</button><button onclick="changeImg(1)" id="nextBtn" '+(curImgIdx===imgs.length-1?'class="hidden"':'')+'>&#8250;</button></div><img src="'+esc(imgs[curImgIdx])+'" alt="'+esc(curProduct.name)+'">';
+if(imgs.length>1){
+thumbs.innerHTML=imgs.map(function(img,i){
+return '<div class="thumb'+(i===curImgIdx?' active':'')+'" onclick="setImg('+i+')"><img src="'+esc(img)+'" alt=""></div>';
+}).join('');
+}else{
+thumbs.innerHTML='';
+}
 }
 function changeImg(dir){
-  if(!curProduct.images||curProduct.images.length===0)return;
-  var len=curProduct.images.length;
-  curImgIdx=(curImgIdx+dir+len)%len;
-  renderGallery();
+if(!curProduct.images||curProduct.images.length===0)return;
+var len=curProduct.images.length;
+curImgIdx=(curImgIdx+dir+len)%len;
+renderGallery();
 }
 function setImg(idx){curImgIdx=idx;renderGallery()}
 function closePModal(){
-  document.getElementById('pModal').classList.remove('active');
-  document.body.style.overflow='';
+document.getElementById('pModal').classList.remove('active');
+document.body.style.overflow='';
+}function openCS(){
+var s=Store.getSettings();
+var qr=document.getElementById('csQR');
+if(s.customer_service_qr){
+qr.innerHTML='<img src="'+esc(s.customer_service_qr)+'" alt="客服二维码">';
+}else{
+qr.innerHTML='<div class="ph">请前往后台<br>配置客服二维码</div>';
 }
-
-/* ===== Customer Service ===== */
-function openCS(){
-  var s=Store.getSettings();
-  var qr=document.getElementById('csQR');
-  if(s.customer_service_qr){
-    qr.innerHTML='<img src="'+esc(s.customer_service_qr)+'" alt="客服二维码">';
-  }else{
-    qr.innerHTML='<div class="ph">请前往后台<br>配置客服二维码</div>';
-  }
-  document.getElementById('csWx').textContent=s.contact_wechat||'未配置';
-  document.getElementById('csModal').classList.add('active');
+document.getElementById('csWx').textContent=s.contact_wechat||'未配置';
+document.getElementById('csModal').classList.add('active');
 }
 function closeCS(){document.getElementById('csModal').classList.remove('active')}
 function copyWx(){
-  var t=document.getElementById('csWx').textContent;
-  if(navigator.clipboard){
-    navigator.clipboard.writeText(t).then(function(){alert('已复制微信号：'+t)}).catch(function(){fallbackCopy(t)});
-  }else{fallbackCopy(t)}
+var t=document.getElementById('csWx').textContent;
+if(navigator.clipboard){
+navigator.clipboard.writeText(t).then(function(){alert('已复制微信号：'+t)}).catch(function(){fallbackCopy(t)});
+}else{fallbackCopy(t)}
 }
 function fallbackCopy(t){
-  var ta=document.createElement('textarea');
-  ta.value=t;ta.style.position='fixed';ta.style.opacity='0';
-  document.body.appendChild(ta);ta.select();
-  try{document.execCommand('copy');alert('已复制微信号：'+t)}catch(e){alert('请手动复制：'+t)}
-  document.body.removeChild(ta);
+var ta=document.createElement('textarea');
+ta.value=t;ta.style.position='fixed';ta.style.opacity='0';
+document.body.appendChild(ta);ta.select();
+try{document.execCommand('copy');alert('已复制微信号：'+t)}catch(e){alert('请手动复制：'+t)}
+document.body.removeChild(ta);
+}document.querySelectorAll('.cat-nav button').forEach(function(btn){
+btn.addEventListener('click',function(){
+document.querySelectorAll('.cat-nav button').forEach(function(b){b.classList.remove('active')});
+btn.classList.add('active');
+var newCat=btn.dataset.cat;
+curCat=newCat;
+renderSections();
+if(curCat!=='all'){
+var sec=document.querySelector('.cat-section[data-cat="'+curCat+'"]');
+if(sec)sec.scrollIntoView({behavior:'smooth',block:'start'});
 }
-
-/* ===== Events ===== */
-document.querySelectorAll('.cat-nav button').forEach(function(btn){
-  btn.addEventListener('click',function(){
-    document.querySelectorAll('.cat-nav button').forEach(function(b){b.classList.remove('active')});
-    btn.classList.add('active');
-    var newCat=btn.dataset.cat;
-    curCat=newCat;
-    renderSections();
-    if(curCat!=='all'){
-      var sec=document.querySelector('.cat-section[data-cat="'+curCat+'"]');
-      if(sec)sec.scrollIntoView({behavior:'smooth',block:'start'});
-    }
-  });
+});
 });
 document.getElementById('pModal').addEventListener('click',function(e){if(e.target.id==='pModal')closePModal()});
 document.getElementById('csModal').addEventListener('click',function(e){if(e.target.id==='csModal')closeCS()});
-document.addEventListener('keydown',function(e){if(e.key==='Escape'){closePModal();closeCS()}});
-
-/* ===== Init ===== */
-Store.init();
-renderSections();
-</script>
+document.addEventListener('keydown',function(e){if(e.key==='Escape'){closePModal();closeCS()}});Store.init();
+renderSections();</script>
 </body>
 </html>
