@@ -415,11 +415,10 @@ var Store={
   getProducts:function(){try{return JSON.parse(localStorage.getItem('jj_products')||'[]')}catch(e){return[]}},
   getSettings:function(){try{return JSON.parse(localStorage.getItem('jj_settings')||'{}')}catch(e){return{}}},
   init:function(){
-    if(!localStorage.getItem('jj_init_v17')){
-      localStorage.setItem('jj_products',JSON.stringify(SP));
-      localStorage.setItem('jj_settings',JSON.stringify(SS));
-      localStorage.setItem('jj_init_v17','1');
-    }
+    // 始终使用最新商品数据，避免localStorage被清空后商品丢失
+    localStorage.setItem('jj_products',JSON.stringify(SP));
+    localStorage.setItem('jj_settings',JSON.stringify(SS));
+    localStorage.setItem('jj_init_v18','1');
   }
 };
 
