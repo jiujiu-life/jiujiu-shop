@@ -415,7 +415,11 @@ var Store={
   getProducts:function(){try{return JSON.parse(localStorage.getItem('jj_products')||'[]')}catch(e){return[]}},
   getSettings:function(){try{return JSON.parse(localStorage.getItem('jj_settings')||'{}')}catch(e){return{}}},
   init:function(){
-    // 始终使用最新商品数据，避免localStorage被清空后商品丢失
+    // 清除旧缓存，强制刷新商品数据
+    localStorage.removeItem('jj_products');
+    localStorage.removeItem('jj_settings');
+    localStorage.removeItem('jj_init_v17');
+    // 写入最新商品数据
     localStorage.setItem('jj_products',JSON.stringify(SP));
     localStorage.setItem('jj_settings',JSON.stringify(SS));
     localStorage.setItem('jj_init_v18','1');
