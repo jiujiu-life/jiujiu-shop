@@ -412,8 +412,8 @@ var SS={customer_service_qr:'',contact_wechat:'jiujiu_service'};
 
 /* ===== Store ===== */
 var Store={
-  getProducts:function(){try{return JSON.parse(localStorage.getItem('jj_products')||'[]')}catch(e){return[]}},
-  getSettings:function(){try{return JSON.parse(localStorage.getItem('jj_settings')||'{}')}catch(e){return{}}},
+  getProducts:function(){try{var stored=localStorage.getItem('jj_products');return stored&&stored!=='[]'?JSON.parse(stored):SP}catch(e){return SP}},
+  getSettings:function(){try{var stored=localStorage.getItem('jj_settings');return stored?JSON.parse(stored):SS}catch(e){return SS}},
   init:function(){
     // 清除旧缓存，强制刷新商品数据
     localStorage.removeItem('jj_products');
