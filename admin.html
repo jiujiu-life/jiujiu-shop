@@ -146,7 +146,7 @@ tr:hover{background:var(--bg-warm)}
   .admin-content{padding:20px 16px 60px}
   .form-card,.settings-card{padding:20px}
 }
-</style>
+.cat-filter{display:flex;gap:8px;margin-bottom:16px;flex-wrap:wrap}.cf-btn{padding:6px 14px;border:1px solid var(--border);background:var(--bg-card);color:var(--text-light);font-size:13px;border-radius:16px;cursor:pointer;transition:var(--trs);font-family:inherit}.cf-btn:hover{border-color:var(--brand);color:var(--brand)}.cf-btn.active{background:var(--brand);color:#fff;border-color:var(--brand)}</style>
 </head>
 <body>
 
@@ -179,8 +179,15 @@ tr:hover{background:var(--bg-warm)}
 
     <!-- ===== Product Management ===== -->
     <div class="tab-section active" id="tab-pm">
-      <div class="pm-head">
-        <h2>商品管理</h2>
+      <div class="cat-filter" style="display:flex;gap:8px;margin-bottom:16px;flex-wrap:wrap">
+  <button class="cf-btn active" data-cf="all" onclick="filterCat('all')">全部</button>
+  <button class="cf-btn" data-cf="女悦时光" onclick="filterCat('女悦时光')">女悦时光</button>
+  <button class="cf-btn" data-cf="男悦时光" onclick="filterCat('男悦时光')">男悦时光</button>
+  <button class="cf-btn" data-cf="伴侣亲密" onclick="filterCat('伴侣亲密')">伴侣亲密</button>
+  <button class="cf-btn" data-cf="私密护理" onclick="filterCat('私密护理')">私密护理</button>
+  <button class="cf-btn" data-cf="仪式氛围" onclick="filterCat('仪式氛围')">仪式氛围</button>
+</div><div class="pm-head">
+        <h2>商品管理 <span id="pmCount" style="font-size:13px;color:var(--text-light);font-weight:400;margin-left:8px"></span></h2>
         <button class="btn-add" onclick="showForm()">+ 添加商品</button>
       </div>
       <div class="table-wrap">
@@ -350,27 +357,36 @@ function switchTab(name){
 
 /* ===== Product Management Table ===== */
 var uploadedImages=[];
+var curAdminCat='all';
+var SRC_LABEL={'mx':'慕希','lb':'立波','zn':'挚诺'};
+var SRC_COLOR={'mx':'#FF9800','lb':'#4CAF50','zn':'#9C27B0'};
 function renderTable(){
   var ps=Store.getProducts();
+  if(curAdminCat!=='all'){
+    ps=ps.filter(function(p){return p.category===curAdminCat});
+  }
   var body=document.getElementById('pmBody');
   var empty=document.getElementById('pmEmpty');
   var tableWrap=document.querySelector('.table-wrap');
   if(ps.length===0){
     tableWrap.style.display='none';
     empty.style.display='block';
+    document.getElementById('pmCount').textContent=curAdminCat==='all'?'暂无商品':'该分类暂无商品';
     return;
   }
   tableWrap.style.display='block';
   empty.style.display='none';
+  document.getElementById('pmCount').textContent='共 '+ps.length+' 件商品'+(curAdminCat!=='all'?' · '+curAdminCat:'');
   body.innerHTML=ps.map(function(p){
     var hasImg=p.images&&p.images.length>0;
     var thumb=hasImg?'<img src="'+esc(p.images[0])+'" alt="">'
       :'<div class="ph" style="background:'+grad(p.category)+';width:100%;height:100%;display:flex;align-items:center;justify-content:center;font-size:9px;color:rgba(255,255,255,.8)">'+esc(p.name.substring(0,4))+'</div>';
     var stMap={'published':'<span class="status-badge st-published">已上架</span>','draft':'<span class="status-badge st-draft">草稿</span>','unpublished':'<span class="status-badge st-unpublished">已下架</span>'};
     var checked=p.status==='published'?'checked':'';
+    var srcLabel=p.source?'<span style="display:inline-block;margin-left:4px;padding:1px 5px;border-radius:4px;font-size:10px;font-weight:600;background:'+SRC_COLOR[p.source]+'15;color:'+SRC_COLOR[p.source]+'">'+SRC_LABEL[p.source]+'</span>':'';
     return '<tr data-id="'+p.id+'">'
       +'<td><div class="td-thumb">'+thumb+'</div></td>'
-      +'<td style="font-weight:500">'+esc(p.name)+'</td>'
+      +'<td style="font-weight:500">'+esc(p.name)+srcLabel+'</td>'
       +'<td><span style="font-size:12px;color:var(--brand);background:var(--pink-light);padding:2px 8px;border-radius:8px">'+esc(p.category)+'</span></td>'
       +'<td><input class="inline-edit" data-field="price" value="'+esc(p.price)+'" onchange="inlineEdit(\''+p.id+'\',\'price\',this.value)"></td>'
       +'<td><input class="inline-edit" data-field="stock" type="number" value="'+esc(p.stock)+'" onchange="inlineEdit(\''+p.id+'\',\'stock\',this.value)" style="width:60px"></td>'
@@ -383,6 +399,12 @@ function renderTable(){
       +'</div></td>'
       +'</tr>';
   }).join('');
+}
+function filterCat(cat){
+  curAdminCat=cat;
+  document.querySelectorAll('.cf-btn').forEach(function(b){b.classList.remove('active')});
+  document.querySelector('.cf-btn[data-cf="'+cat+'"]').classList.add('active');
+  renderTable();
 }
 function inlineEdit(id,field,val){
   var ps=Store.getProducts();
